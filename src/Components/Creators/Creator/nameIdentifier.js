@@ -1,33 +1,37 @@
+import { Button, TextField } from "@material-ui/core";
+import { Form, Formik, Field } from "formik";
 import * as React from "react";
-import { FieldArray, Form, Field,Formik } from "formik";
+import { MyField } from "../../MyField";
 
 
-const NameIdentifier = (props) => {
 
+
+
+
+const NameIdentifier: React.FC<Props> = ({ onSubmit }) => {
     return (
-        <Form>
-        <Field
-            name="nameIdentifier"
-            type="text"
-            placeholder="Name Identifier"
-        />
+        <Formik
+            initialValues={{ nameIdentifier: "" }}
+            onSubmit={values => {
+                onSubmit(values);
+            }}
+        >
+            {({ values }) => (
+                <Form>
+                    <div>
 
-        <Field
-        name="nameIdentifierScheme"
-
-        type="text"
-        placeholder="Name Identifier Scheme"
-
-        />
-
-    <Field
-        name="schemeURI"
-
-        type="text"
-        placeholder="Scheme URI"
-
-    />
-        </Form>
-)
+                        <p/>
+                        <Field
+                            name="nameIdentifier"
+                            placeholder="Name Identifier"
+                            component={MyField}
+                        />
+                    </div>
+                    <pre>{JSON.stringify(values, null, 2)}</pre>
+                </Form>
+            )}
+        </Formik>
+    );
 };
+
 export default NameIdentifier;

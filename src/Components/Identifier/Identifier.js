@@ -1,17 +1,17 @@
 import { Button, TextField } from "@material-ui/core";
 import { Form, Formik, Field } from "formik";
 import * as React from "react";
-import { MyField } from "../../MyField";
+import { MyField } from "../MyField";
+
+
+// To do: Hidden Field seems not working for now.
 
 
 
-
-
-
-const CreatorName: React.FC<Props> = ({ onSubmit }) => {
+const Identifier: React.FC<Props> = ({ onSubmit }) => {
     return (
         <Formik
-            initialValues={{ creatorName: "" }}
+            initialValues={{ identifier: "" }}
             onSubmit={values => {
                 onSubmit(values);
             }}
@@ -19,11 +19,19 @@ const CreatorName: React.FC<Props> = ({ onSubmit }) => {
             {({ values }) => (
                 <Form>
                     <div>
-                        <label> Creator(s): </label>
+                        <label> Identifier </label>
                         <p/>
                         <Field
-                            name="creatorName"
-                            placeholder="Creator Name"
+                            name="identifier"
+                            placeholder="DOI"
+                            component={MyField}
+                        />
+                    </div>
+                    <div>
+
+                        <Field
+                            name="identifierType"
+                            type = "hidden"
                             component={MyField}
                         />
                     </div>
@@ -34,4 +42,4 @@ const CreatorName: React.FC<Props> = ({ onSubmit }) => {
     );
 };
 
-export default CreatorName;
+export default Identifier;
