@@ -1,4 +1,3 @@
-import { Button, TextField } from "@material-ui/core";
 import { Form, Formik, Field } from "formik";
 import * as React from "react";
 import { MyField } from "../../MyField";
@@ -8,7 +7,7 @@ import { MyField } from "../../MyField";
 
 
 
-const NameIdentifier: React.FC<Props> = ({ onSubmit }) => {
+const NameIdentifier: (props) = ({ onSubmit }) => {
     return (
         <Formik
             initialValues={{ nameIdentifier: "" }}
@@ -19,8 +18,6 @@ const NameIdentifier: React.FC<Props> = ({ onSubmit }) => {
             {({ values }) => (
                 <Form>
                     <div>
-
-                        <p/>
                         <Field
                             name="nameIdentifier"
                             placeholder="Name Identifier"

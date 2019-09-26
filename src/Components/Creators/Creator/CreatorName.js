@@ -1,14 +1,10 @@
-import { Button, TextField } from "@material-ui/core";
 import { Form, Formik, Field } from "formik";
 import * as React from "react";
 import { MyField } from "../../MyField";
 
 
 
-
-
-
-const CreatorName: React.FC<Props> = ({ onSubmit }) => {
+const CreatorName: (props) = ({ onSubmit }) => {
     return (
         <Formik
             initialValues={{ creatorName: "" }}

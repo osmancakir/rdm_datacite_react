@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf572936-2565-4c77-b1a9-94489dcf5fe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Identifier/Identifier.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/MyField.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Creators/Creator/CreatorName.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Creators/Creator/CreatorName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Creators/Creator/Creators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Creators/Creator/Creators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Creators/Creator/nameIdentifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Creators/Creator/nameIdentifier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Identifier/Identifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Identifier/Identifier.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +81,7 @@
       <workItem from="1569417560182" duration="206000" />
       <workItem from="1569417933849" duration="5138000" />
       <workItem from="1569480803528" duration="2516000" />
-      <workItem from="1569499252692" duration="3786000" />
+      <workItem from="1569499252692" duration="9278000" />
     </task>
     <servers />
   </component>
