@@ -1,21 +1,42 @@
-import React from 'react';
-import './App.css';
 import CreatorName from "./Components/Creators/Creator/CreatorName";
 import Identifier from "./Components/Identifier/Identifier";
-import NameIdentifier from "./Components/Creators/Creator/nameIdentifier";
+import NameIdentifier from "./Components/Creators/Creator/NameIdentifier";
+import './App.css';
+import { Form, Formik } from "formik";
+import * as React from "react";
+import {Button} from "@material-ui/core"
+
+// import { MyField } from "./Components/MyField";
 
 
-function App() {
-  return (
-    <div className="App">
-        <h1> DataCite Meta Data Generator</h1>
-        <Identifier/>
-        <CreatorName/>
-        <NameIdentifier/>
+// To do: Hidden Field seems okay with initial values
 
 
-    </div>
-  );
-}
+
+const App= () => {
+    return (
+        <Formik
+            onSubmit={(values, { setSubmitting }) => {
+                setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    setSubmitting(false);
+                }, 500);
+            }}
+        >
+
+            {({ values, isSubmitting }) => (
+                <Form>
+                    <Identifier/>
+                    <CreatorName/>
+                    <NameIdentifier/>
+                    <pre>{JSON.stringify(values, null, 2)}</pre>
+                    <Button type="submit" disabled={isSubmitting}>
+                        Submit
+                    </Button>
+                </Form>
+            )}
+        </Formik>
+    );
+};
 
 export default App;

@@ -3,22 +3,18 @@ import * as React from "react";
 import { MyField } from "../../MyField";
 
 
-
-const CreatorName = () => {
+const NameIdentifier = () => {
     return (
 
             <div>
-                <label> Creator(s): </label>
-                <p/>
                 <Field
-                    name="creatorName"
-                    placeholder="Creator Name"
+                    name="nameIdentifier"
+                    placeholder="Name Identifier"
                     component={MyField}
                 />
             </div>
 
-
     );
 };
 
-export default CreatorName;
+export default NameIdentifier;

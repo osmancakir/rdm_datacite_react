@@ -1,4 +1,4 @@
-import { Form, Formik, Field } from "formik";
+import { Field } from "formik";
 import * as React from "react";
 import { MyField } from "../MyField";
 
@@ -7,30 +7,18 @@ import { MyField } from "../MyField";
 
 
 
-const Identifier: (props) = ({ onSubmit }) => {
+const Identifier = () => {
     return (
-        <Formik
-            initialValues={{ identifier: "", identifierType:"DOI" }}
-            onSubmit={values => {
-                onSubmit(values);
-            }}
-        >
-            {({ values }) => (
-                <Form>
-                    <div>
-                        <label> Identifier </label>
-                        <p/>
-                        <Field
-                            name="identifier"
-                            placeholder="DOI"
-                            component={MyField}
-                        />
-                    </div>
+            <div>
+                <label> Identifier </label>
+                <p/>
+                <Field
+                    name="identifier"
+                    placeholder="DOI"
+                    component={MyField}
+                />
+            </div>
 
-                    <pre>{JSON.stringify(values, null, 2)}</pre>
-                </Form>
-            )}
-        </Formik>
     );
 };
 
