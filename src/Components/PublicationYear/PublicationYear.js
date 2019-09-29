@@ -4,7 +4,7 @@ import {Grid, Typography} from '@material-ui/core';
 
 import {TextField} from 'formik-material-ui';
 
-const Identifier = () => {
+const PublicationYear = () => {
 
 
     /* select options are here below whole Formcontrol (menuitem, Inputlabel) component is about this*/
@@ -13,13 +13,13 @@ const Identifier = () => {
     return (
         <Grid container>
             <Grid item xs="12">
-                <Typography variant="h5">Identifier</Typography>
+                <Typography variant="h5">Publication Year</Typography>
             </Grid>
             {/* Normal Simplest Textfield Component*/}
             <Grid item>
                 <Field
-                    name={"identifier"}
-                    label="Identifier"
+                    name={"publicationYear"}
+                    label="Publication Year"
                     fullWidth
                     required={true}
                     component={TextField}
@@ -29,4 +29,4 @@ const Identifier = () => {
     );
 };
 
-export default Identifier;
+export default PublicationYear;
