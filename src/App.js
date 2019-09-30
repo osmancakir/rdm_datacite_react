@@ -3,7 +3,7 @@ import Identifier from './Components/Identifier/Identifier';
 import './App.css';
 import {Form, Formik} from 'formik';
 import * as React from 'react';
-import {Button, Container, Grid, Typography} from '@material-ui/core';
+import {Button, Container, Box, Typography} from '@material-ui/core';
 import Dates from './Components/Dates';
 import Titles from "./Components/Titles";
 import Publisher from "./Components/Publisher/Publisher";
@@ -12,6 +12,14 @@ import ResourceType from "./Components/ResourceType/ResourceType";
 import Subjects from "./Components/Subjects";
 import Contributors from "./Components/Contributors";
 import RelatedIdentifiers from "./Components/RelatedIdentifiers";
+import Descriptions from "./Components/Descriptions"
+import Language from "./Components/Language/Language";
+import AlternateIdentifiers from "./Components/AlternateIdentifiers";
+import Sizes from "./Components/Sizes";
+import Formats from "./Components/Formats"
+import Version from "./Components/Version/Version";
+import RightsList from "./Components/RightsList/RigtsList";
+import FundingReferences from "./Components/FundingReferences";
 
 const App = () => {
 
@@ -49,14 +57,37 @@ const App = () => {
             "resourceTypeGeneral":'',
         },
         ],
+        descriptions:[
+            {
+            "value": '', "descriptionType": '',},
+
+        ],
+        alternateIdentifiers:[{
+            "value":'', "alternateIdentifierType":'',
+        }],
+        sizes:[{
+            "value":'',
+        },],
+        formats:[{
+            "value":'',
+        },],
+        rightsList:[{
+            "schemeURI":'', "rightsIdentifierScheme":'',"rightsIdentifier":'',"rightsURI":''
+        },
+        ],
+        fundingReferences:[{
+            "funderName":'', "funderIdentifier":'',"funderIdentifierType":'',"awardNumber":'', "awardTitle":'',
+        },
+        ],
     };
-    /* relatedIdentifier relatedIdentifierType relationType relatedMetaDataScheme schemeURI resorceTypeGeneral*/
+    /* Comments */
     return (
         <React.Fragment>
+            <Box color="text.primary">
             <Container maxWidth="lg">
-                <Grid item xs="12">
+
                     <Typography variant="h3">DataCite Metadata Generator</Typography>
-                </Grid>
+
             <div>
                 <Formik
                     initialValues={initialValues}
@@ -69,13 +100,14 @@ const App = () => {
                 >
                     {({values, isSubmitting}) => (
                         <Form>
+                            {/* Identfier hidden attribute DOI; deal later*/}
                             <Identifier/>
                             <Titles titles={values.titles}/>
                             {/* Creators have nested dynamic form; deal later*/}
                             <Creators creators ={values.creators}/>
                             <Publisher/>
                             <PublicationYear/>
-                            {/* ResourceType do not write its values!*/}
+                            {/* ResourceType do not write its values; deal later*/}
                             <ResourceType resourceType = {values.resourceType}/>
                             <Subjects subjects={values.subjects}/>
                             {/* Contributors have nested dynamic form; deal later*/}
@@ -83,15 +115,26 @@ const App = () => {
                             <Contributors contributors={values.contributors}/>
                             <Dates dates={values.dates} />
                             <RelatedIdentifiers relatedIdentifiers={values.relatedIdentifiers}/>
-                            <pre>{JSON.stringify(values, null, 2)}</pre>
+                            <Descriptions descriptions={values.descriptions}/>
+                            {/* GeoLocations has 4 layers for example: geoLocations>geoLocation>geoLocationPoint>pointLongitude what to do now?*/}
+                            <Language/>
+                            <AlternateIdentifiers alternateIdentifiers={values.alternateIdentifiers}/>
+                            {/* Sizes and Formats maybe didn't need array Components. Since they have only one input?*/}
+                            <Sizes sizes={values.sizes}/>
+                            <Formats formats={values.formats}/>
+                            <Version/>
+                            <RightsList rightsList={values.rightsList}/>
+                            <FundingReferences fundingReferences={values.fundingReferences}/>
                             <Button type="submit" disabled={isSubmitting}>
                                 Submit
                             </Button>
+                            <pre>{JSON.stringify(values, null, 2)}</pre>
                         </Form>
                     )}
                 </Formik>
             </div>
         </Container>
+            </Box>
         </React.Fragment>
     );
 };

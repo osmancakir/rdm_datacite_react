@@ -20,7 +20,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`creators.${index}.givenName`}
                     label="givenName"
@@ -29,7 +29,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`creators.${index}.familyName`}
                     label="familyName"
@@ -38,7 +38,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`creators.${index}.nameIdentifier`}
                     label="nameIdentifier"
@@ -47,7 +47,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`creators.${index}.nameIdScheme`}   // "":'', "":'', ""
                     label="nameIdScheme"

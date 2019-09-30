@@ -4,30 +4,17 @@ import {Grid} from '@material-ui/core';
 
 import {TextField} from 'formik-material-ui';
 
-const Subject = (props) => {
+const Rights = (props) => {
 
     const {index} = props;
-    /* select options are here*/
 
 
     return (
         <Grid container>
-
-
-
-            <Grid item xs={6}>
+            <Grid item>
                 <Field
-                    name={`subjects.${index}.subject`}
-                    label="subject"
-                    fullWidth
-                    required={false}
-                    component={TextField}
-                />
-            </Grid>
-            <Grid item xs={6}>
-                <Field
-                    name={`subjects.${index}.subjectScheme`}
-                    label="subjectScheme"
+                    name={`rights.${index}.schemeURI`}
+                    label="Scheme URI"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -35,8 +22,8 @@ const Subject = (props) => {
             </Grid>
             <Grid item>
                 <Field
-                    name={`subjects.${index}.subjectSchemeUri`}
-                    label="subjectSchemeUri"
+                    name={`rights.${index}.rightsIdentifierScheme`}
+                    label="Rights Identifier Scheme"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -44,15 +31,25 @@ const Subject = (props) => {
             </Grid>
             <Grid item>
                 <Field
-                    name={`subjects.${index}.subjectValueURI`}
-                    label="subjectValueURI"
+                    name={`rights.${index}.rightsIdentifier`}
+                    label="Rights Identifier"
                     fullWidth
                     required={false}
                     component={TextField}
                 />
             </Grid>
+            <Grid item>
+                <Field
+                    name={`rights.${index}.rightsURI`}
+                    label="Rights URI"
+                    fullWidth
+                    required={false}
+                    component={TextField}
+                />
+            </Grid>
+
         </Grid>
     );
 };
 
-export default Subject;
+export default Rights;

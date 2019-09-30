@@ -35,7 +35,7 @@ const Date = (props) => {
                     label="Value"
                     type="datetime-local"
                     fullWidth
-                    required={true}
+                    required={false}
                     component={TextField}
                     InputLabelProps={{
                         shrink: true,
@@ -46,7 +46,7 @@ const Date = (props) => {
             </Grid>
 
             <Grid item>
-                <FormControl required fullWidth>
+                <FormControl fullWidth>
                     <InputLabel shrink>
                         Type
                     </InputLabel>

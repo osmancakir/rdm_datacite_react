@@ -27,14 +27,14 @@ const RelatedIdentifier = (props) => {
             <Grid item>
                 <Field
                     name={`relatedIdentifiers.${index}.relatedIdentifier`}
-                    label="Information"
+                    label="Related Identifier"
                     fullWidth
                     required={false}
                     component={TextField}
                 />
             </Grid>
             <Grid item>
-                <FormControl required fullWidth>
+                <FormControl fullWidth>
                     <InputLabel shrink>
                         relatedIdentifierType
                     </InputLabel>
@@ -55,7 +55,7 @@ const RelatedIdentifier = (props) => {
                 </FormControl>
             </Grid>
             <Grid item>
-                <FormControl required fullWidth>
+                <FormControl fullWidth>
                     <InputLabel shrink>
                         relationType
                     </InputLabel>
@@ -79,7 +79,7 @@ const RelatedIdentifier = (props) => {
             <Grid item>
                 <Field
                     name={`relatedIdentifiers.${index}.relatedMetaDataScheme`}
-                    label="Information"
+                    label="Related Meta Data Scheme"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -88,7 +88,7 @@ const RelatedIdentifier = (props) => {
             <Grid item>
                 <Field
                     name={`relatedIdentifiers.${index}.schemeURI`}
-                    label="Information"
+                    label="Scheme URI"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -97,7 +97,7 @@ const RelatedIdentifier = (props) => {
             <Grid item>
                 <Field
                     name={`relatedIdentifiers.${index}.resourceTypeGeneral`}
-                    label="Information"
+                    label="Resource Type General"
                     fullWidth
                     required={false}
                     component={TextField}

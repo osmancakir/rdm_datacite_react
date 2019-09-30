@@ -20,22 +20,21 @@ const Contributor = (props) => {
 
     return (
         <Grid container>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`contributors.${index}.contributorName`}
-                    label="Information"
+                    label="Contributor Name"
                     fullWidth
                     required={false}
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <FormControl required fullWidth>
                     <InputLabel shrink>
                         Type
                     </InputLabel>
                     <Field
-                        required
                         fullWidth
                         component={Select}
                         name={`contributors.${index}.contributorType`}
@@ -51,37 +50,37 @@ const Contributor = (props) => {
                 </FormControl>
             </Grid>
 
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`contributors.${index}.givenName`}
-                    label="Information"
+                    label="Given Name"
                     fullWidth
                     required={false}
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`contributors.${index}.familyName`}
-                    label="Information"
+                    label="Family Name"
                     fullWidth
                     required={false}
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`contributors.${index}.nameIdentifier`}
-                    label="Information"
+                    label="Name Identifier"
                     fullWidth
                     required={false}
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`contributors.${index}.schemeURI`}
-                    label="Information"
+                    label="Scheme URI"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -90,7 +89,7 @@ const Contributor = (props) => {
             <Grid item>
                 <Field
                     name={`contributors.${index}.nameIdentifierScheme`}
-                    label="Information"
+                    label="Name Identifier Scheme"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -99,7 +98,7 @@ const Contributor = (props) => {
             <Grid item>
                 <Field
                     name={`contributors.${index}.affiliation`}
-                    label="Information"
+                    label="Affiliation"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -108,7 +107,7 @@ const Contributor = (props) => {
             <Grid item>
                 <Field
                     name={`contributors.${index}.affiliationIdentifier`}
-                    label="Information"
+                    label="Affiliation Identifier"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -117,7 +116,7 @@ const Contributor = (props) => {
             <Grid item>
                 <Field
                     name={`contributors.${index}.affiliationIdentifierScheme`}
-                    label="Information"
+                    label="Affiliation Identifier Scheme"
                     fullWidth
                     required={false}
                     component={TextField}
