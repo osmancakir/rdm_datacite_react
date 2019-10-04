@@ -10,8 +10,9 @@ const Creator = (props) => {
 
 
     return (
-        <Grid container>
-            <Grid item>
+        <React.Fragment>
+        <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`creators.${index}.creatorName`}
                     label="creatorName"
@@ -20,7 +21,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`creators.${index}.givenName`}
                     label="givenName"
@@ -29,7 +30,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`creators.${index}.familyName`}
                     label="familyName"
@@ -38,7 +39,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`creators.${index}.nameIdentifier`}
                     label="nameIdentifier"
@@ -47,7 +48,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6} >
                 <Field
                     name={`creators.${index}.nameIdScheme`}   // "":'', "":'', ""
                     label="nameIdScheme"
@@ -56,7 +57,7 @@ const Creator = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`creators.${index}.identifierSchemeUri`}
                     label="identifierSchemeUri"
@@ -66,7 +67,7 @@ const Creator = (props) => {
                 />
             </Grid>
 
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`creators.${index}.creatorAffiliation`}
                     label="creatorAffiliation"
@@ -76,6 +77,7 @@ const Creator = (props) => {
                 />
             </Grid>
         </Grid>
+        </React.Fragment>
     );
 };
 

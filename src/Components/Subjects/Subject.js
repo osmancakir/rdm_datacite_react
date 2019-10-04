@@ -11,10 +11,7 @@ const Subject = (props) => {
 
 
     return (
-        <Grid container>
-
-
-
+        <Grid container spacing={2}>
             <Grid item xs={6}>
                 <Field
                     name={`subjects.${index}.subject`}
@@ -33,7 +30,7 @@ const Subject = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`subjects.${index}.subjectSchemeUri`}
                     label="subjectSchemeUri"
@@ -42,7 +39,7 @@ const Subject = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <Field
                     name={`subjects.${index}.subjectValueURI`}
                     label="subjectValueURI"

@@ -11,12 +11,10 @@ const Identifier = () => {
 
 
     return (
-        <Grid container>
-            <Grid item xs="12">
-                <Typography variant="h5">Identifier</Typography>
-            </Grid>
-            {/* Normal Simplest Textfield Component*/}
-            <Grid item>
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Identifier:</Typography>
+        <Grid container spacing={3}>
+            <Grid item xs={12}>
                 <Field
                     name={"identifier"}
                     label="Identifier"
@@ -26,6 +24,7 @@ const Identifier = () => {
                 />
             </Grid>
         </Grid>
+        </React.Fragment>
     );
 };
 

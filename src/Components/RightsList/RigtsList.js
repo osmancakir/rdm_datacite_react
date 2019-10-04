@@ -1,7 +1,7 @@
 import React from 'react';
 import Rights from './Rights';
 import {FieldArray} from 'formik';
-import {Box, Grid, Typography, Button} from '@material-ui/core';
+import {Grid, Typography, Button} from '@material-ui/core';
 import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
 
 const RightsList = (props) => {
@@ -9,12 +9,9 @@ const RightsList = (props) => {
     const {rightsList} = props;
 
     return (
-        <Box mt={3}>
-            {/* Component Header: inside Typography*/}
-            <Grid container spacing={2}>
-                <Grid item xs="12">
-                    <Typography variant="h5">Rights List:</Typography>
-                </Grid>
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Rights List:</Typography>
+            <Grid container spacing={3}>
                 <Grid item xs="12">
                     <FieldArray
                         name="rightsList"
@@ -46,7 +43,7 @@ const RightsList = (props) => {
                                         variant="contained"
                                         onClick={() => push(
                                             {schemeURI: '', rightsIdentifierScheme: '', rightsIdentifier: '', rightsURI:'',
-                                                })}
+                                            })}
                                     >
                                         <AddIcon/>
                                     </Button>
@@ -56,7 +53,7 @@ const RightsList = (props) => {
                     />
                 </Grid>
             </Grid>
-        </Box>
+        </React.Fragment>
     );
 };
 

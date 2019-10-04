@@ -16,8 +16,9 @@ const FundingReference = (props) => {
     const funderIdentifierTypes = ["Crossref Funder ID", "GRID", "ISNI", "Other"]
 
     return (
-        <Grid container>
-            <Grid item>
+        <React.Fragment>
+        <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`fundingReference.${index}.funderName`}
                     label="Funder Name"
@@ -26,7 +27,7 @@ const FundingReference = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`fundingReference.${index}.funderIdentifier`}
                     label="Funder Identifier"
@@ -35,7 +36,7 @@ const FundingReference = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <FormControl required fullWidth>
                     <InputLabel shrink>
                         Type
@@ -56,7 +57,7 @@ const FundingReference = (props) => {
                     </Field>
                 </FormControl>
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`fundingReference.${index}.awardNumber`}
                     label="Award Number"
@@ -65,7 +66,7 @@ const FundingReference = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`fundingReference.${index}.awardTitle`}
                     label="Award Title"
@@ -76,6 +77,7 @@ const FundingReference = (props) => {
             </Grid>
 
         </Grid>
+        </React.Fragment>
     );
 };
 

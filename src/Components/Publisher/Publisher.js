@@ -6,17 +6,10 @@ import {TextField} from 'formik-material-ui';
 
 const Publisher = () => {
 
-
-    /* select options are here below whole Formcontrol (menuitem, Inputlabel) component is about this*/
-
-
     return (
-        <Grid container>
-            <Grid item xs="12">
-                <Typography variant="h5">Publisher</Typography>
-            </Grid>
-            {/* Normal Simplest Textfield Component*/}
-            <Grid item>
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Publisher:</Typography>
+            <Grid item xs={12}>
                 <Field
                     name={"publisher"}
                     label="Publisher"
@@ -25,7 +18,7 @@ const Publisher = () => {
                     component={TextField}
                 />
             </Grid>
-        </Grid>
+        </React.Fragment>
     );
 };
 

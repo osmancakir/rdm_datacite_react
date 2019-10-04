@@ -19,8 +19,9 @@ const Contributor = (props) => {
         "RightsHolder", "Sponsor", "Supervisor", "WorkPackageLeader", "Other"];
 
     return (
-        <Grid container>
-            <Grid item xs={6}>
+        <React.Fragment>
+        <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.contributorName`}
                     label="Contributor Name"
@@ -29,7 +30,7 @@ const Contributor = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <FormControl required fullWidth>
                     <InputLabel shrink>
                         Type
@@ -50,7 +51,7 @@ const Contributor = (props) => {
                 </FormControl>
             </Grid>
 
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.givenName`}
                     label="Given Name"
@@ -59,7 +60,7 @@ const Contributor = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.familyName`}
                     label="Family Name"
@@ -68,7 +69,7 @@ const Contributor = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.nameIdentifier`}
                     label="Name Identifier"
@@ -77,7 +78,7 @@ const Contributor = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.schemeURI`}
                     label="Scheme URI"
@@ -86,7 +87,7 @@ const Contributor = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.nameIdentifierScheme`}
                     label="Name Identifier Scheme"
@@ -95,7 +96,7 @@ const Contributor = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.affiliation`}
                     label="Affiliation"
@@ -104,7 +105,7 @@ const Contributor = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.affiliationIdentifier`}
                     label="Affiliation Identifier"
@@ -113,7 +114,7 @@ const Contributor = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`contributors.${index}.affiliationIdentifierScheme`}
                     label="Affiliation Identifier Scheme"
@@ -124,6 +125,7 @@ const Contributor = (props) => {
             </Grid>
 
         </Grid>
+        </React.Fragment>
     );
 };
 

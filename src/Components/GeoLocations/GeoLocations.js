@@ -1,37 +1,39 @@
 import React from 'react';
-import Description from './Description';
+import GeoLocation from './GeoLocation';
 import {FieldArray} from 'formik';
 import {Grid, Typography, Button} from '@material-ui/core';
 import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
 
-const Descriptions = (props) => {
 
-    const {descriptions} = props;
+const GeoLocations = (props) => {
+
+    const {geoLocations} = props;
 
     return (
 <React.Fragment>
-    <Typography variant="h6" gutterBottom>Descriptions:</Typography>
+    <Typography variant="h6" gutterBottom>Geo Locations: </Typography>
         <Grid container spacing={3}>
+
             <Grid item xs="12">
                 <FieldArray
-                    name="descriptions"
+                    name="geoLocations"
                     render={({move, swap, push, insert, unshift, pop}) => (
                         <Grid container>
                             <Grid item xs="12">
-                                {descriptions.length > 0 &&
-                                descriptions.map((description, index) => (
+                                {geoLocations.length > 0 &&
+                                geoLocations.map((geoLocation, index) => (
                                     <Grid container key={index}>
                                         {/* Here actually didn't understand much how index is used*/}
                                         {/* but here with Fieldarray +- operations are done.*/}
                                         <Grid item>
-                                            <Description index={index}/>
+                                            <GeoLocation index={index}/>
                                         </Grid>
                                         <Grid item>
                                             <Button
                                                 variant="contained"
                                                 onClick={() => pop(index)}
                                             >
-                                                <RemoveIcon />
+                                                <RemoveIcon/>
                                             </Button>
                                         </Grid>
                                     </Grid>
@@ -42,9 +44,11 @@ const Descriptions = (props) => {
                                     className="secondary"
                                     variant="contained"
                                     onClick={() => push(
-                                        {value: '', descriptionType: '',})}
+                                        {geoLocationPlace: '', geoLocationPoint: '', pointLongitude: '', pointLatitude: '', geoLocationBox: '',
+                                            westBoundLongitude:'', eastBoundLongitude:'', southBoundLatitude:'', northBoundLatitude:'', geoLocationPolygon:'',
+                                        })}
                                 >
-                                    <AddIcon />
+                                    <AddIcon/>
                                 </Button>
                             </Grid>
                         </Grid>
@@ -56,4 +60,4 @@ const Descriptions = (props) => {
     );
 };
 
-export default Descriptions;
+export default GeoLocations;

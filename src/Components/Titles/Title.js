@@ -21,8 +21,8 @@ const Title = (props) => {
     ];
 
     return (
-        <Grid container>
-            <Grid item>
+        <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`titles.${index}.value`}
                     label="Title"
@@ -31,9 +31,9 @@ const Title = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <FormControl required fullWidth>
-                    <InputLabel shrink>
+                    <InputLabel shrink variant={"outlined"}>
                         titleType
                     </InputLabel>
                     <Field

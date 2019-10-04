@@ -7,16 +7,10 @@ import {TextField} from 'formik-material-ui';
 const PublicationYear = () => {
 
 
-    /* select options are here below whole Formcontrol (menuitem, Inputlabel) component is about this*/
-
-
     return (
-        <Grid container>
-            <Grid item xs="12">
-                <Typography variant="h5">Publication Year</Typography>
-            </Grid>
-            {/* Normal Simplest Textfield Component*/}
-            <Grid item>
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Publication Year:</Typography>
+            <Grid item xs={6}>
                 <Field
                     name={"publicationYear"}
                     label="Publication Year"
@@ -25,7 +19,7 @@ const PublicationYear = () => {
                     component={TextField}
                 />
             </Grid>
-        </Grid>
+        </React.Fragment>
     );
 };
 

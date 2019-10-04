@@ -1,6 +1,6 @@
 import React from 'react';
 import {FieldArray} from 'formik';
-import {Box, Grid, Typography, Button} from '@material-ui/core';
+import {Grid, Typography, Button} from '@material-ui/core';
 import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
 import Size from "./Size";
 
@@ -9,12 +9,9 @@ const Sizes = (props) => {
     const {sizes} = props;
 
     return (
-        <Box mt={3}>
-            {/* Component Header: inside Typography*/}
-            <Grid container spacing={2}>
-                <Grid item xs="12">
-                    <Typography variant="h5">Sizes</Typography>
-                </Grid>
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Sizes:</Typography>
+            <Grid container spacing={3}>
                 <Grid item xs="12">
                     <FieldArray
                         name="sizes"
@@ -29,7 +26,7 @@ const Sizes = (props) => {
                                             <Grid item>
                                                 <Size index={index}/>
                                             </Grid>
-                                            <Grid item>
+                                            <Grid item xs={6}>
                                                 <Button
                                                     variant="contained"
                                                     onClick={() => pop(index)}
@@ -40,7 +37,7 @@ const Sizes = (props) => {
                                         </Grid>
                                     ))}
                                 </Grid>
-                                <Grid item xs="12">
+                                <Grid item xs="6">
                                     <Button
                                         className="secondary"
                                         variant="contained"
@@ -54,7 +51,7 @@ const Sizes = (props) => {
                     />
                 </Grid>
             </Grid>
-        </Box>
+        </React.Fragment>
     );
 };
 

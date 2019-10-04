@@ -1,7 +1,7 @@
 import React from 'react';
 import RelatedIdentifier from './RelatedIdentifier';
 import {FieldArray} from 'formik';
-import {Box, Grid, Typography, Button} from '@material-ui/core';
+import {Grid, Typography, Button} from '@material-ui/core';
 import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
 
 const RelatedIdentifiers = (props) => {
@@ -9,13 +9,10 @@ const RelatedIdentifiers = (props) => {
     const {relatedIdentifiers} = props;
 
     return (
-        <Box mt={3}>
-            {/* Component Header: inside Typography*/}
-            <Grid container spacing={2}>
-                <Grid item xs="12">
-                    <Typography variant="h5">Related Identifiers</Typography>
-                </Grid>
-                <Grid item xs="12">
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Related Identifiers:</Typography>
+            <Grid container spacing={3}>
+            <Grid item xs="12">
                     <FieldArray
                         name="relatedIdentifiers"
                         render={({move, swap, push, insert, unshift, pop}) => (
@@ -40,7 +37,7 @@ const RelatedIdentifiers = (props) => {
                                         </Grid>
                                     ))}
                                 </Grid>
-                                <Grid item xs="12">
+                                <Grid item>
                                     <Button
                                         className="secondary"
                                         variant="contained"
@@ -56,7 +53,7 @@ const RelatedIdentifiers = (props) => {
                     />
                 </Grid>
             </Grid>
-        </Box>
+        </React.Fragment>
     );
 };
 

@@ -19,11 +19,10 @@ const ResourceType = (props) => {
         "Software", "Sound", "Text", "Workflow", "Other"];
 
     return (
-        <Grid container>
-            <Grid item xs="12">
-                <Typography variant="h5">Resource</Typography>
-            </Grid>
-            <Grid item>
+        <React.Fragment>
+            <Grid contaner spacing={2}>
+            <Typography variant="h6" gutterBottom>Resource:</Typography>
+            <Grid item xs={12}>
                 <Field
                     name={`resourceType.${index}.value`}
                     label="Resource Type"
@@ -32,7 +31,7 @@ const ResourceType = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={6}>
                 <FormControl required fullWidth>
                     <InputLabel shrink>
                         Type
@@ -54,8 +53,8 @@ const ResourceType = (props) => {
                 </FormControl>
             </Grid>
 
-
-        </Grid>
+            </Grid>
+        </React.Fragment>
     );
 };
 

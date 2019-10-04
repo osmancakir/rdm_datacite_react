@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from './Title';
 import {FieldArray} from 'formik';
-import {Box, Grid, Typography, Button} from '@material-ui/core';
+import {Grid, Typography, Button} from '@material-ui/core';
 import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
 
 const Titles = (props) => {
@@ -9,27 +9,24 @@ const Titles = (props) => {
     const {titles} = props;
 
     return (
-        <Box mt={3}>
-            {/* Component Header: inside Typography*/}
-            <Grid container spacing={2}>
-                <Grid item xs="12">
-                    <Typography variant="h5">Titles</Typography>
-                </Grid>
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Titles:</Typography>
+            <Grid container spacing={3}>
                 <Grid item xs="12">
                     <FieldArray
                         name="titles"
                         render={({move, swap, push, insert, unshift, pop}) => (
                             <Grid container>
-                                <Grid item xs="12">
+                                <Grid item xs={12}>
                                     {titles.length > 0 &&
                                     titles.map((title, index) => (
                                         <Grid container key={index}>
                                             {/* Here actually didn't understand much how index is used*/}
                                             {/* but here with Fieldarray +- operations are done.*/}
-                                            <Grid item>
+                                            <Grid item xs={12}>
                                                 <Title index={index}/>
                                             </Grid>
-                                            <Grid item>
+                                            <Grid item xs={12} sm={3}>
                                                 <Button
                                                     variant="contained"
                                                     onClick={() => pop(index)}
@@ -55,7 +52,7 @@ const Titles = (props) => {
                     />
                 </Grid>
             </Grid>
-        </Box>
+        </React.Fragment>
     );
 };
 

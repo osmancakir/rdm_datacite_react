@@ -6,17 +6,11 @@ import {TextField} from 'formik-material-ui';
 
 const Version = () => {
 
-
-    /* select options are here below whole Formcontrol (menuitem, Inputlabel) component is about this*/
-
-
     return (
-        <Grid container>
-            <Grid item xs="12">
-                <Typography variant="h5">Version:</Typography>
-            </Grid>
-            {/* Normal Simplest Textfield Component*/}
-            <Grid item>
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Version:</Typography>
+        <Grid container spacing={3}>
+            <Grid item xs={12}>
                 <Field
                     name={"version"}
                     label="Version"
@@ -26,6 +20,7 @@ const Version = () => {
                 />
             </Grid>
         </Grid>
+        </React.Fragment>
     );
 };
 

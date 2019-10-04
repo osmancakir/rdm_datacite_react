@@ -9,12 +9,10 @@ const Language = () => {
 
 
     return (
-        <Grid container>
+        <React.Fragment>
+            <Typography variant="h6" gutterBottom>Language: </Typography>
+            <Grid container spacing={3}>
             <Grid item xs="12">
-                <Typography variant="h5">Language</Typography>
-            </Grid>
-            {/* Normal Simplest Textfield Component*/}
-            <Grid item>
                 <Field
                     name={"language"}
                     label="Language"
@@ -23,7 +21,8 @@ const Language = () => {
                     component={TextField}
                 />
             </Grid>
-        </Grid>
+            </Grid>
+        </React.Fragment>
     );
 };
 

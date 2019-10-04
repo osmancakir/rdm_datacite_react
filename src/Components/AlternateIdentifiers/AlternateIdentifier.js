@@ -11,11 +11,9 @@ const AlternateIdentifier = (props) => {
 
 
     return (
-        <Grid container>
-
-
-
-            <Grid item xs={6}>
+        <React.Fragment>
+        <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`alternateIdentifiers.${index}.value`}
                     label="Alternate Identifier"
@@ -24,7 +22,7 @@ const AlternateIdentifier = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <Field
                     name={`alternateIdentifiers.${index}.alternateIdentifierType`}
                     label="Alternate Identifier Type"
@@ -35,6 +33,7 @@ const AlternateIdentifier = (props) => {
             </Grid>
 
         </Grid>
+        </React.Fragment>
     );
 };
 

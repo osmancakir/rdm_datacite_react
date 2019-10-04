@@ -47,7 +47,7 @@ const Date = (props) => {
 
             <Grid item>
                 <FormControl fullWidth>
-                    <InputLabel shrink>
+                    <InputLabel shrink >
                         Type
                     </InputLabel>
                     <Field
