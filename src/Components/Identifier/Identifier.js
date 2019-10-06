@@ -1,5 +1,5 @@
 import React from 'react';
-import {FieldArray, Field} from 'formik';
+import {FieldArray, FastField} from 'formik';
 import {Grid, Typography} from '@material-ui/core';
 import {TextField} from 'formik-material-ui';
 
@@ -23,7 +23,7 @@ const Identifier = (props) => {
                                     <Grid container key={index}>
 
                                         <Grid item xs={12}>
-                                            <Field
+                                            <FastField
                                                 name={`identifier.${index}.value`}
                                                 label="Identifier"
                                                 fullWidth

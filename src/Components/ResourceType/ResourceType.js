@@ -1,5 +1,5 @@
 import React from 'react';
-import {FieldArray, Field} from 'formik';
+import {FieldArray, FastField} from 'formik';
 import {Grid, Typography, InputLabel, MenuItem, FormControl,} from '@material-ui/core';
 import {TextField, Select} from 'formik-material-ui';
 
@@ -27,8 +27,8 @@ const ResourceType = (props) => {
                                         {/* Here actually didn't understand much how index is used*/}
                                         {/* but here with Fieldarray +- operations are done.*/}
                                         <Grid item xs={12}>
-                                            <Field
-                                                name={`resourceType.${index}.value`}
+                                            <FastField
+                    name={`resourceType.${index}.value`}
                                                 label="Resource Type"
                                                 fullWidth
                                                 required={true}
@@ -40,7 +40,7 @@ const ResourceType = (props) => {
                                                 <InputLabel shrink>
                                                     Type
                                                 </InputLabel>
-                                                <Field
+                                                <FastField
                                                     required
                                                     fullWidth
                                                     component={Select}
@@ -53,7 +53,7 @@ const ResourceType = (props) => {
                                                         <MenuItem key={resTypes}
                                                                   value={resTypes}>{resTypes}</MenuItem>,
                                                     )}
-                                                </Field>
+                                                </FastField>
                                             </FormControl>
                                         </Grid>
 

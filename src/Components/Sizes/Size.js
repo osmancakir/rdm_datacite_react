@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {Grid} from '@material-ui/core';
 
 import {TextField} from 'formik-material-ui';
@@ -13,7 +13,7 @@ const Size = (props) => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <Field
+                <FastField
                     name={`sizes.${index}.value`}
                     label="Size"
                     fullWidth

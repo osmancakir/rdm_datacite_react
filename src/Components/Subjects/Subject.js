@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {Grid} from '@material-ui/core';
 
 import {TextField} from 'formik-material-ui';
@@ -13,7 +13,7 @@ const Subject = (props) => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={6}>
-                <Field
+                <FastField
                     name={`subjects.${index}.subject`}
                     label="subject"
                     fullWidth
@@ -22,7 +22,7 @@ const Subject = (props) => {
                 />
             </Grid>
             <Grid item xs={6}>
-                <Field
+                <FastField
                     name={`subjects.${index}.subjectScheme`}
                     label="subjectScheme"
                     fullWidth
@@ -31,7 +31,7 @@ const Subject = (props) => {
                 />
             </Grid>
             <Grid item xs={6}>
-                <Field
+                <FastField
                     name={`subjects.${index}.subjectSchemeUri`}
                     label="subjectSchemeUri"
                     fullWidth
@@ -40,7 +40,7 @@ const Subject = (props) => {
                 />
             </Grid>
             <Grid item xs={6}>
-                <Field
+                <FastField
                     name={`subjects.${index}.subjectValueURI`}
                     label="subjectValueURI"
                     fullWidth

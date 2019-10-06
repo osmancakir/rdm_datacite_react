@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {Grid} from '@material-ui/core';
 
 import {TextField} from 'formik-material-ui';
@@ -14,7 +14,7 @@ const AlternateIdentifier = (props) => {
         <React.Fragment>
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`alternateIdentifiers.${index}.value`}
                     label="Alternate Identifier"
                     fullWidth
@@ -23,7 +23,7 @@ const AlternateIdentifier = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`alternateIdentifiers.${index}.alternateIdentifierType`}
                     label="Alternate Identifier Type"
                     fullWidth

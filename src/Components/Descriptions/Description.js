@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {
     InputLabel,
     MenuItem,
@@ -18,7 +18,7 @@ const Description = (props) => {
     return (
         <Grid container spacing ={3}>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`descriptions.${index}.value`}
                     label="Description"
                     fullWidth
@@ -31,7 +31,7 @@ const Description = (props) => {
                     <InputLabel shrink>
                         Description Type
                     </InputLabel>
-                    <Field
+                    <FastField
                         required
                         fullWidth
                         component={Select}
@@ -44,7 +44,7 @@ const Description = (props) => {
                             <MenuItem key={descriptionType}
                                       value={descriptionType}>{descriptionType}</MenuItem>,
                         )}
-                    </Field>
+                    </FastField>
                 </FormControl>
             </Grid>
 

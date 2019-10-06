@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {Grid} from '@material-ui/core';
 
 import {TextField} from 'formik-material-ui';
@@ -13,7 +13,7 @@ const Creator = (props) => {
         <React.Fragment>
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`creators.${index}.creatorName`}
                     label="creatorName"
                     fullWidth
@@ -22,7 +22,7 @@ const Creator = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`creators.${index}.givenName`}
                     label="givenName"
                     fullWidth
@@ -31,7 +31,7 @@ const Creator = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`creators.${index}.familyName`}
                     label="familyName"
                     fullWidth
@@ -40,7 +40,7 @@ const Creator = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`creators.${index}.nameIdentifier`}
                     label="nameIdentifier"
                     fullWidth
@@ -49,7 +49,7 @@ const Creator = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6} >
-                <Field
+                <FastField
                     name={`creators.${index}.nameIdScheme`}   // "":'', "":'', ""
                     label="nameIdScheme"
                     fullWidth
@@ -58,7 +58,7 @@ const Creator = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`creators.${index}.identifierSchemeUri`}
                     label="identifierSchemeUri"
                     fullWidth
@@ -68,7 +68,7 @@ const Creator = (props) => {
             </Grid>
 
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`creators.${index}.creatorAffiliation`}
                     label="creatorAffiliation"
                     fullWidth

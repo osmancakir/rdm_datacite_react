@@ -1,5 +1,5 @@
 import React from 'react';
-import {FieldArray, Field} from 'formik';
+import {FieldArray, FastField} from 'formik';
 import {Grid, Typography} from '@material-ui/core';
 import {TextField} from 'formik-material-ui';
 
@@ -23,8 +23,8 @@ const PublicationYear = (props) => {
                                     <Grid container key={index}>
 
                                         <Grid item xs={12}>
-                                            <Field
-                                                name={`publicationYear.${index}.value`}
+                                            <FastField
+                    name={`publicationYear.${index}.value`}
                                                 label="Publication Year (YYYY)"
                                                 fullWidth
                                                 required={true}

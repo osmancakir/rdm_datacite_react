@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {
     InputLabel,
     MenuItem,
@@ -19,7 +19,7 @@ const FundingReference = (props) => {
         <React.Fragment>
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`fundingReferences.${index}.funderName`}
                     label="Funder Name"
                     fullWidth
@@ -28,7 +28,7 @@ const FundingReference = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`fundingReferences.${index}.funderIdentifier`}
                     label="Funder Identifier"
                     fullWidth
@@ -41,7 +41,7 @@ const FundingReference = (props) => {
                     <InputLabel shrink>
                         Type
                     </InputLabel>
-                    <Field
+                    <FastField
                         required
                         fullWidth
                         component={Select}
@@ -54,11 +54,11 @@ const FundingReference = (props) => {
                             <MenuItem key={funderIdentifierType}
                                       value={funderIdentifierType}>{funderIdentifierType}</MenuItem>,
                         )}
-                    </Field>
+                    </FastField>
                 </FormControl>
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`fundingReferences.${index}.awardNumber`}
                     label="Award Number"
                     fullWidth
@@ -67,7 +67,7 @@ const FundingReference = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`fundingReferences.${index}.awardTitle`}
                     label="Award Title"
                     fullWidth

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {
     InputLabel,
     MenuItem,
@@ -30,7 +30,7 @@ const Date = (props) => {
     return (
         <Grid container>
             <Grid item>
-                <Field
+                <FastField
                     name={`dates.${index}.value`}
                     label="Value"
                     type="datetime-local"
@@ -50,7 +50,7 @@ const Date = (props) => {
                     <InputLabel shrink >
                         Type
                     </InputLabel>
-                    <Field
+                    <FastField
                         required
                         fullWidth
                         component={Select}
@@ -63,12 +63,12 @@ const Date = (props) => {
                             <MenuItem key={dateType}
                                       value={dateType}>{dateType}</MenuItem>,
                         )}
-                    </Field>
+                    </FastField>
                 </FormControl>
             </Grid>
 
             <Grid item>
-                <Field
+                <FastField
                     name={`dates.${index}.information`}
                     label="Information"
                     fullWidth

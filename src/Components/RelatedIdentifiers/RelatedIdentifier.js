@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {
     InputLabel,
     MenuItem,
@@ -25,7 +25,7 @@ const RelatedIdentifier = (props) => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <Field
+                <FastField
                     name={`relatedIdentifiers.${index}.relatedIdentifier`}
                     label="Related Identifier"
                     fullWidth
@@ -38,7 +38,7 @@ const RelatedIdentifier = (props) => {
                     <InputLabel shrink>
                         relatedIdentifierType
                     </InputLabel>
-                    <Field
+                    <FastField
                         required
                         fullWidth
                         component={Select}
@@ -51,7 +51,7 @@ const RelatedIdentifier = (props) => {
                             <MenuItem key={relatedIdentifierType}
                                       value={relatedIdentifierType}>{relatedIdentifierType}</MenuItem>,
                         )}
-                    </Field>
+                    </FastField>
                 </FormControl>
             </Grid>
             <Grid item xs={6}>
@@ -59,7 +59,7 @@ const RelatedIdentifier = (props) => {
                     <InputLabel shrink>
                         relationType
                     </InputLabel>
-                    <Field
+                    <FastField
                         required
                         fullWidth
                         component={Select}
@@ -72,12 +72,12 @@ const RelatedIdentifier = (props) => {
                             <MenuItem key={relationType}
                                       value={relationType}>{relationType}</MenuItem>,
                         )}
-                    </Field>
+                    </FastField>
                 </FormControl>
             </Grid>
 
             <Grid item xs ={6}>
-                <Field
+                <FastField
                     name={`relatedIdentifiers.${index}.relatedMetaDataScheme`}
                     label="Related Meta Data Scheme"
                     fullWidth
@@ -86,7 +86,7 @@ const RelatedIdentifier = (props) => {
                 />
             </Grid>
             <Grid item xs={6}>
-                <Field
+                <FastField
                     name={`relatedIdentifiers.${index}.schemeURI`}
                     label="Scheme URI"
                     fullWidth
@@ -95,7 +95,7 @@ const RelatedIdentifier = (props) => {
                 />
             </Grid>
             <Grid item>
-                <Field
+                <FastField
                     name={`relatedIdentifiers.${index}.resourceTypeGeneral`}
                     label="Resource Type General"
                     fullWidth

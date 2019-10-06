@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {
     InputLabel,
     MenuItem,
@@ -22,7 +22,7 @@ const Contributor = (props) => {
         <React.Fragment>
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.contributorName`}
                     label="Contributor Name"
                     fullWidth
@@ -35,7 +35,7 @@ const Contributor = (props) => {
                     <InputLabel shrink>
                         Type
                     </InputLabel>
-                    <Field
+                    <FastField
                         fullWidth
                         component={Select}
                         name={`contributors.${index}.contributorType`}
@@ -47,12 +47,12 @@ const Contributor = (props) => {
                             <MenuItem key={contributorType}
                                       value={contributorType}>{contributorType}</MenuItem>,
                         )}
-                    </Field>
+                    </FastField>
                 </FormControl>
             </Grid>
 
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.givenName`}
                     label="Given Name"
                     fullWidth
@@ -61,7 +61,7 @@ const Contributor = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.familyName`}
                     label="Family Name"
                     fullWidth
@@ -70,7 +70,7 @@ const Contributor = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.nameIdentifier`}
                     label="Name Identifier"
                     fullWidth
@@ -79,7 +79,7 @@ const Contributor = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.schemeURI`}
                     label="Scheme URI"
                     fullWidth
@@ -88,7 +88,7 @@ const Contributor = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.nameIdentifierScheme`}
                     label="Name Identifier Scheme"
                     fullWidth
@@ -97,7 +97,7 @@ const Contributor = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.affiliation`}
                     label="Affiliation"
                     fullWidth
@@ -106,7 +106,7 @@ const Contributor = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.affiliationIdentifier`}
                     label="Affiliation Identifier"
                     fullWidth
@@ -115,7 +115,7 @@ const Contributor = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`contributors.${index}.affiliationIdentifierScheme`}
                     label="Affiliation Identifier Scheme"
                     fullWidth

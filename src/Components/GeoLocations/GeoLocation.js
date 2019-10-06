@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import {Grid} from '@material-ui/core';
 
 import {TextField} from 'formik-material-ui';
@@ -13,7 +13,7 @@ const GeoLocation = (props) => {
         <React.Fragment>
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.geoLocationPlace`}
                     label="geoLocationPlace"
                     fullWidth
@@ -22,7 +22,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.geoLocationPoint`}
                     label="geoLocationPoint"
                     fullWidth
@@ -31,7 +31,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.pointLongitude`}
                     label="pointLongitude"
                     fullWidth
@@ -40,7 +40,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.pointLatitude`}
                     label="pointLatitude"
                     fullWidth
@@ -49,7 +49,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.geoLocationBox`}   // "":'', "":'', ""
                     label="geoLocationBox"
                     fullWidth
@@ -58,7 +58,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.westBoundLongitude`}
                     label="westBoundLongitude"
                     fullWidth
@@ -67,7 +67,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.eastBoundLongitude`}   // "":'', "":'', ""
                     label="eastBoundLongitude"
                     fullWidth
@@ -76,7 +76,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.southBoundLatitude`}
                     label="southBoundLatitude"
                     fullWidth
@@ -85,7 +85,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.northBoundLatitude`}   // "":'', "":'', ""
                     label="northBoundLatitude"
                     fullWidth
@@ -94,7 +94,7 @@ const GeoLocation = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Field
+                <FastField
                     name={`geoLocations.${index}.geoLocationPolygon`}
                     label="geoLocationPolygon"
                     fullWidth
