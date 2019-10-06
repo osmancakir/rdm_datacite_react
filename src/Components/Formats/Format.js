@@ -17,7 +17,7 @@ const Format = (props) => {
 
             <Grid item xs={12}>
                 <Field
-                    name={`format.${index}.value`}
+                    name={`formats.${index}.value`}
                     label="Format"
                     fullWidth
                     required={false}

@@ -4,27 +4,14 @@
     <list default="true" id="bf572936-2565-4c77-b1a9-94489dcf5fe7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/AlternateIdentifiers/AlternateIdentifiers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AlternateIdentifiers/AlternateIdentifiers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Contributors/Contributors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Contributors/Contributors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Creators/Creators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Creators/Creators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Dates/Dates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Dates/Dates.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Descriptions/Description.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Descriptions/Description.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Descriptions/Descriptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Descriptions/Descriptions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Formats/Formats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Formats/Formats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/FundingReferences/FundingReference.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FundingReferences/FundingReference.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/FundingReferences/FundingReferences.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FundingReferences/FundingReferences.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GeoLocations/GeoLocations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GeoLocations/GeoLocations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/InitialValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Formats/Format.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Formats/Format.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Identifier/Identifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Identifier/Identifier.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Language/Language.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Language/Language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MandatoryElements/MandatoryElements.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MyField.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RelatedIdentifiers/RelatedIdentifiers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RelatedIdentifiers/RelatedIdentifiers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ResourceType/ResourceType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ResourceType/ResourceType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RightsList/RigtsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RightsList/RigtsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sizes/Sizes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sizes/Sizes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Subjects/Subjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Subjects/Subjects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Titles/Titles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Titles/Titles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/useStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PublicationYear/PublicationYear.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PublicationYear/PublicationYear.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Publisher/Publisher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Publisher/Publisher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/RightsList/Rights.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RightsList/Rights.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sizes/Size.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sizes/Size.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Version/Version.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Version/Version.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +98,7 @@
       <workItem from="1570279974108" duration="11638000" />
       <workItem from="1570300794091" duration="11401000" />
       <workItem from="1570314200578" duration="6204000" />
-      <workItem from="1570353233840" duration="8079000" />
+      <workItem from="1570353233840" duration="13230000" />
     </task>
     <servers />
   </component>

@@ -14,7 +14,7 @@ const Size = (props) => {
         <Grid container spacing={2}>
             <Grid item xs={12}>
                 <Field
-                    name={`size.${index}.value`}
+                    name={`sizes.${index}.value`}
                     label="Size"
                     fullWidth
                     required={false}

@@ -13,7 +13,7 @@ const Rights = (props) => {
         <Grid container spacing={2}>
             <Grid item xs={6}>
                 <Field
-                    name={`rights.${index}.schemeURI`}
+                    name={`rightsList.${index}.schemeURI`}
                     label="Scheme URI"
                     fullWidth
                     required={false}
@@ -22,7 +22,7 @@ const Rights = (props) => {
             </Grid>
             <Grid item xs={6}>
                 <Field
-                    name={`rights.${index}.rightsIdentifierScheme`}
+                    name={`rightsList.${index}.rightsIdentifierScheme`}
                     label="Rights Identifier Scheme"
                     fullWidth
                     required={false}
@@ -31,7 +31,7 @@ const Rights = (props) => {
             </Grid>
             <Grid item xs={6}>
                 <Field
-                    name={`rights.${index}.rightsIdentifier`}
+                    name={`rightsList.${index}.rightsIdentifier`}
                     label="Rights Identifier"
                     fullWidth
                     required={false}
@@ -40,7 +40,7 @@ const Rights = (props) => {
             </Grid>
             <Grid item xs={6}>
                 <Field
-                    name={`rights.${index}.rightsURI`}
+                    name={`rightsList.${index}.rightsURI`}
                     label="Rights URI"
                     fullWidth
                     required={false}
