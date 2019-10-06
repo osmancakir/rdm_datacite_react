@@ -12,12 +12,12 @@ const RelatedIdentifiers = (props) => {
         <React.Fragment>
             <Typography variant="h6" gutterBottom>Related Identifiers:</Typography>
             <Grid container spacing={3}>
-            <Grid item xs="12">
+            <Grid item xs={12}>
                     <FieldArray
                         name="relatedIdentifiers"
                         render={({move, swap, push, insert, unshift, pop}) => (
                             <Grid container>
-                                <Grid item xs="12">
+                                <Grid item xs={12}>
                                     {relatedIdentifiers.length > 0 &&
                                     relatedIdentifiers.map((date, index) => (
                                         <Grid container key={index}>

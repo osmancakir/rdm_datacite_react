@@ -12,12 +12,12 @@ const Subjects = (props) => {
         <React.Fragment>
             <Typography variant="h6" gutterBottom>Subjects:</Typography>
             <Grid container spacing={3}>
-                <Grid item xs="12">
+                <Grid item xs={12}>
                     <FieldArray
                         name="subjects"
                         render={({move, swap, push, insert, unshift, pop}) => (
                             <Grid container>
-                                <Grid item xs="12">
+                                <Grid item xs={12}>
                                     {subjects.length > 0 &&
                                     subjects.map((subject, index) => (
                                         <Grid container key={index}>
@@ -37,7 +37,7 @@ const Subjects = (props) => {
                                         </Grid>
                                     ))}
                                 </Grid>
-                                <Grid item xs="12">
+                                <Grid item xs={12}>
                                     <Button
                                         className="secondary"
                                         variant="contained"

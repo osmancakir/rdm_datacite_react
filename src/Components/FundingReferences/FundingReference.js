@@ -20,7 +20,7 @@ const FundingReference = (props) => {
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
                 <Field
-                    name={`fundingReference.${index}.funderName`}
+                    name={`fundingReferences.${index}.funderName`}
                     label="Funder Name"
                     fullWidth
                     required={false}
@@ -29,7 +29,7 @@ const FundingReference = (props) => {
             </Grid>
             <Grid item xs={12} sm={6}>
                 <Field
-                    name={`fundingReference.${index}.funderIdentifier`}
+                    name={`fundingReferences.${index}.funderIdentifier`}
                     label="Funder Identifier"
                     fullWidth
                     required={false}
@@ -45,7 +45,7 @@ const FundingReference = (props) => {
                         required
                         fullWidth
                         component={Select}
-                        name={`fundingReference.${index}.funderIdentifierType`}
+                        name={`fundingReferences.${index}.funderIdentifierType`}
                     >
                         <MenuItem value="">
                             <em>None</em>
@@ -59,7 +59,7 @@ const FundingReference = (props) => {
             </Grid>
             <Grid item xs={12} sm={6}>
                 <Field
-                    name={`fundingReference.${index}.awardNumber`}
+                    name={`fundingReferences.${index}.awardNumber`}
                     label="Award Number"
                     fullWidth
                     required={false}
@@ -68,7 +68,7 @@ const FundingReference = (props) => {
             </Grid>
             <Grid item xs={12} sm={6}>
                 <Field
-                    name={`fundingReference.${index}.awardTitle`}
+                    name={`fundingReferences.${index}.awardTitle`}
                     label="Award Title"
                     fullWidth
                     required={false}

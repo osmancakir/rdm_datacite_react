@@ -12,32 +12,30 @@ const Titles = (props) => {
         <React.Fragment>
             <Typography variant="h6" gutterBottom>Titles:</Typography>
             <Grid container spacing={3}>
-                <Grid item xs="12">
+                <Grid item xs={12}>
                     <FieldArray
                         name="titles"
                         render={({move, swap, push, insert, unshift, pop}) => (
                             <Grid container>
-                                <Grid item xs={12}>
-                                    {titles.length > 0 &&
-                                    titles.map((title, index) => (
-                                        <Grid container key={index}>
-                                            {/* Here actually didn't understand much how index is used*/}
-                                            {/* but here with Fieldarray +- operations are done.*/}
-                                            <Grid item xs={12}>
-                                                <Title index={index}/>
-                                            </Grid>
-                                            <Grid item xs={12} sm={3}>
-                                                <Button
-                                                    variant="contained"
-                                                    onClick={() => pop(index)}
-                                                >
-                                                    <RemoveIcon/>
-                                                </Button>
-                                            </Grid>
+                                {titles.length > 0 &&
+                                titles.map((title, index) => (
+                                    <Grid container key={index}>
+                                        {/* Here actually didn't understand much how index is used*/}
+                                        {/* but here with Fieldarray +- operations are done.*/}
+                                        <Grid item xs={12}>
+                                            <Title index={index}/>
                                         </Grid>
-                                    ))}
-                                </Grid>
-                                <Grid item xs="12">
+                                        <Grid item xs={12} sm={3}>
+                                            <Button
+                                                variant="contained"
+                                                onClick={() => pop(index)}
+                                            >
+                                                <RemoveIcon/>
+                                            </Button>
+                                        </Grid>
+                                    </Grid>
+                                ))}
+                                <Grid item xs={12}>
                                     <Button
                                         className="secondary"
                                         variant="contained"

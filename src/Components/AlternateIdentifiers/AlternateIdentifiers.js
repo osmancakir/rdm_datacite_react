@@ -12,12 +12,12 @@ const AlternateIdentifiers = (props) => {
 <React.Fragment>
     <Typography variant="h6" gutterBottom>Alternate Identifiers:</Typography>
         <Grid container spacing={3}>
-            <Grid item xs="12">
+            <Grid item xs={12}>
                 <FieldArray
                     name="alternateIdentifiers"
                     render={({move, swap, push, insert, unshift, pop}) => (
                         <Grid container>
-                            <Grid item xs="12">
+                            <Grid item xs={12}>
                                 {alternateIdentifiers.length > 0 &&
                                 alternateIdentifiers.map((alternateIdentifier, index) => (
                                     <Grid container key={index}>
@@ -37,7 +37,7 @@ const AlternateIdentifiers = (props) => {
                                     </Grid>
                                 ))}
                             </Grid>
-                            <Grid item xs="12">
+                            <Grid item xs={12}>
                                 <Button
                                     className="secondary"
                                     variant="contained"

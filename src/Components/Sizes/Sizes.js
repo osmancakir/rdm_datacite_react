@@ -12,18 +12,18 @@ const Sizes = (props) => {
         <React.Fragment>
             <Typography variant="h6" gutterBottom>Sizes:</Typography>
             <Grid container spacing={3}>
-                <Grid item xs="12">
+                <Grid item xs={12}>
                     <FieldArray
                         name="sizes"
                         render={({move, swap, push, insert, unshift, pop}) => (
                             <Grid container>
-                                <Grid item xs="12">
+                                <Grid item xs={12}>
                                     {sizes.length > 0 &&
                                     sizes.map((size, index) => (
                                         <Grid container key={index}>
                                             {/* Here actually didn't understand much how index is used*/}
                                             {/* but here with Fieldarray +- operations are done.*/}
-                                            <Grid item>
+                                            <Grid item xs={12}>
                                                 <Size index={index}/>
                                             </Grid>
                                             <Grid item xs={6}>
@@ -37,7 +37,7 @@ const Sizes = (props) => {
                                         </Grid>
                                     ))}
                                 </Grid>
-                                <Grid item xs="6">
+                                <Grid item xs={6}>
                                     <Button
                                         className="secondary"
                                         variant="contained"

@@ -16,17 +16,17 @@ const Description = (props) => {
     const descriptionTypes = ["Abstract", "Methods", "SeriesInformation", "TableOfContents", "TechnicalInfo", "Other"];
 
     return (
-        <Grid container>
-            <Grid item>
+        <Grid container spacing ={3}>
+            <Grid item xs={12} sm={6}>
                 <Field
-                    name={`description.${index}.value`}
+                    name={`descriptions.${index}.value`}
                     label="Description"
                     fullWidth
                     required={false}
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
                 <FormControl fullWidth>
                     <InputLabel shrink>
                         Description Type
@@ -35,7 +35,7 @@ const Description = (props) => {
                         required
                         fullWidth
                         component={Select}
-                        name={`description.${index}.descriptionType`}
+                        name={`descriptions.${index}.descriptionType`}
                     >
                         <MenuItem value="">
                             <em>None</em>

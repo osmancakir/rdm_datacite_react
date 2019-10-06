@@ -1,9 +1,8 @@
-import Creators from './Components/Creators';
-import Identifier from './Components/Identifier/Identifier';
-
 import {Form, Formik} from 'formik';
 import * as React from 'react';
-//import {Container, Box} from '@material-ui/core';
+
+import Creators from './Components/Creators';
+import Identifier from './Components/Identifier/Identifier';
 import Dates from './Components/Dates';
 import Titles from "./Components/Titles";
 import Publisher from "./Components/Publisher/Publisher";
@@ -32,47 +31,48 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-//import {useScrollTrigger} from "@material-ui/core";
 
 
-const useStyles = makeStyles(theme => ({
-    appBar: {
-        position: 'relative',
-    },
-    layout: {
-        width: 'auto',
-        marginLeft: theme.spacing(2),
-        marginRight: theme.spacing(2),
-        [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
-            width: 600,
-            marginLeft: 'auto',
-            marginRight: 'auto',
+
+const useStyles = makeStyles(theme =>
+    ({
+        appBar: {
+            position: 'relative',
         },
-    },
-    paper: {
-        marginTop: theme.spacing(3),
-        marginBottom: theme.spacing(3),
-        padding: theme.spacing(2),
-        [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
-            marginTop: theme.spacing(6),
-            marginBottom: theme.spacing(6),
-            padding: theme.spacing(3),
+        layout: {
+            width: 'auto',
+            marginLeft: theme.spacing(2),
+            marginRight: theme.spacing(2),
+            [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
+                width: 600,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+            },
         },
-    },
-    stepper: {
-        padding: theme.spacing(3, 0, 5),
-    },
-    buttons: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-    },
-    button: {
-        marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(1),
-    },
-}));
+        paper: {
+            marginTop: theme.spacing(3),
+            marginBottom: theme.spacing(3),
+            padding: theme.spacing(2),
+            [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
+                marginTop: theme.spacing(6),
+                marginBottom: theme.spacing(6),
+                padding: theme.spacing(3),
+            },
+        },
+        stepper: {
+            padding: theme.spacing(3, 0, 5),
+        },
+        buttons: {
+            display: 'flex',
+            justifyContent: 'flex-end',
+        },
+        button: {
+            marginTop: theme.spacing(3),
+            marginLeft: theme.spacing(1),
+        },
+    }));
 
-const steps = ['Mandatory', 'Recommended', 'Other'];
+const steps = ['Mandatory Elements', 'Recommended Elements', 'Other Elements'];
 
 function getStepContent(step) {
     const initialValues = {
@@ -152,15 +152,15 @@ function getStepContent(step) {
                     {({values}) => (
                         <Form>
                             {/* MANDATORY ELEMENTS*/}
-                            {/* Identfier hidden attribute DOI; deal later*/}
-
+                            {/* Identifier hidden attribute DOI; deal later
+                              - simple Field'larda
+                            "A component is changing an uncontrolled input of type text to be controlled" warning appears.*/}
                             <Identifier/>
                             <Titles titles={values.titles}/>
                             {/* Creators have nested dynamic form; deal later*/}
                             <Creators creators ={values.creators}/>
                             <Publisher/>
                             <PublicationYear/>
-                            {/* ResourceType do not write its values; deal later*/}
                             <ResourceType resourceType = {values.resourceType}/>
 
 
@@ -192,9 +192,7 @@ function getStepContent(step) {
                             {/* GeoLocations has 4 layers for example: geoLocations>geoLocation>geoLocationPoint>pointLongitude what to do now?
                             have tried the normal way pointLongitude, pointLatitude duplicate keys error happened.
                              see geoLocationPoint and polygonPoint */}
-
                             <GeoLocations geoLocations = {values.geoLocations}/>
-
                         </Form>
                     )}
                 </Formik>
@@ -235,6 +233,7 @@ function App () {
 
 
     const classes = useStyles();
+
     const [activeStep, setActiveStep] = React.useState(0);
 
     const handleNext = () => {
@@ -244,7 +243,6 @@ function App () {
     const handleBack = () => {
         setActiveStep(activeStep - 1);
     };
-
 
 
     return (

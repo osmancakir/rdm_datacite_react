@@ -14,12 +14,12 @@ const GeoLocations = (props) => {
     <Typography variant="h6" gutterBottom>Geo Locations: </Typography>
         <Grid container spacing={3}>
 
-            <Grid item xs="12">
+            <Grid item xs={12}>
                 <FieldArray
                     name="geoLocations"
                     render={({move, swap, push, insert, unshift, pop}) => (
                         <Grid container>
-                            <Grid item xs="12">
+                            <Grid item xs={12}>
                                 {geoLocations.length > 0 &&
                                 geoLocations.map((geoLocation, index) => (
                                     <Grid container key={index}>
@@ -39,7 +39,7 @@ const GeoLocations = (props) => {
                                     </Grid>
                                 ))}
                             </Grid>
-                            <Grid item xs="12">
+                            <Grid item xs={12}>
                                 <Button
                                     className="secondary"
                                     variant="contained"

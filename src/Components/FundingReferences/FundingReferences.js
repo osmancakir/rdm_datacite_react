@@ -12,12 +12,12 @@ const FundingReferences = (props) => {
 <React.Fragment>
     <Typography variant="h6" gutterBottom>Funding References:</Typography>
         <Grid container spacing={3}>
-            <Grid item xs="12">
+            <Grid item xs={12}>
                 <FieldArray
                     name="fundingReferences"
                     render={({move, swap, push, insert, unshift, pop}) => (
                         <Grid container>
-                            <Grid item xs="12">
+                            <Grid item xs={12}>
                                 {fundingReferences.length > 0 &&
                                 fundingReferences.map((fundingReference, index) => (
                                     <Grid container key={index}>
@@ -37,7 +37,7 @@ const FundingReferences = (props) => {
                                     </Grid>
                                 ))}
                             </Grid>
-                            <Grid item xs="12">
+                            <Grid item xs={12}>
                                 <Button
                                     className="secondary"
                                     variant="contained"

@@ -12,12 +12,12 @@ const RightsList = (props) => {
         <React.Fragment>
             <Typography variant="h6" gutterBottom>Rights List:</Typography>
             <Grid container spacing={3}>
-                <Grid item xs="12">
+                <Grid item xs={12}>
                     <FieldArray
                         name="rightsList"
                         render={({move, swap, push, insert, unshift, pop}) => (
                             <Grid container>
-                                <Grid item xs="12">
+                                <Grid item xs={12}>
                                     {rightsList.length > 0 &&
                                     rightsList.map((rights, index) => (
                                         <Grid container key={index}>
@@ -37,7 +37,7 @@ const RightsList = (props) => {
                                         </Grid>
                                     ))}
                                 </Grid>
-                                <Grid item xs="12">
+                                <Grid item xs={12}>
                                     <Button
                                         className="secondary"
                                         variant="contained"

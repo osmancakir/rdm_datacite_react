@@ -15,12 +15,12 @@ const Dates = (props) => {
           </Typography>
     <Grid container spacing={3}>
 
-        <Grid item xs="12">
+        <Grid item xs={12}>
             <FieldArray
                 name="dates"
                 render={({move, swap, push, insert, unshift, pop}) => (
                     <Grid container>
-                        <Grid item xs="12">
+                        <Grid item xs={12}>
                             {dates.length > 0 &&
                             dates.map((date, index) => (
                                 <Grid container key={index}>

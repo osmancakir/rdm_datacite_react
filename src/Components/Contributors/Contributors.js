@@ -12,12 +12,12 @@ const Contributors = (props) => {
 <React.Fragment>
     <Typography variant="h6" gutterBottom>Contributor(s):</Typography>
         <Grid container spacing={3}>
-            <Grid item xs="12">
+            <Grid item xs={12}>
                 <FieldArray
                     name="contributors"
                     render={({move, swap, push, insert, unshift, pop}) => (
                         <Grid container>
-                            <Grid item xs="12">
+                            <Grid item xs={12}>
                                 {contributors.length > 0 &&
                                 contributors.map((contributor, index) => (
                                     <Grid container key={index}>
@@ -37,7 +37,7 @@ const Contributors = (props) => {
                                     </Grid>
                                 ))}
                             </Grid>
-                            <Grid item xs="12">
+                            <Grid item xs={12}>
                                 <Button
                                     className="secondary"
                                     variant="contained"
