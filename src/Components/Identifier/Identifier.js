@@ -27,7 +27,7 @@ const Identifier = (props) => {
                                                 name={`identifier.${index}.value`}
                                                 label="Identifier"
                                                 fullWidth
-                                                required={true}
+                                                required={false}
                                                 component={TextField}
                                             />
                                         </Grid>

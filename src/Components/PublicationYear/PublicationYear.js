@@ -27,7 +27,7 @@ const PublicationYear = (props) => {
                     name={`publicationYear.${index}.value`}
                                                 label="Publication Year (YYYY)"
                                                 fullWidth
-                                                required={true}
+                                                required={false}
                                                 component={TextField}
                                             />
                                         </Grid>

@@ -88,7 +88,7 @@ function getStepContent(step) {
         identifier: [
             {
                 'value': '',
-                'doi': 'DOI',
+                'identifierType': 'DOI',
             },
             ],
         language: [
@@ -99,6 +99,7 @@ function getStepContent(step) {
         publicationYear: [
             {
                 'value': '',
+                "xml:lang":''
             },
         ],
         publisher: [
@@ -122,32 +123,32 @@ function getStepContent(step) {
         titles: [
             {
                 "value":"",
-                "type":""
+                "type":"",
+                "xml:lang":""
             }
         ],
         creators: [
-            {"creatorName": '', "givenName": '', "familyName": '', "nameIdentifier":'',
-                "nameIdScheme":'', "identifierSchemeUri":'', "creatorAffiliation":''
+            {"creatorName": '', "nameType":'Organizational', "givenName": '', "familyName": '', "nameIdentifier":'',
+                "nameIdentifierScheme":'', "schemeURI":'', "affiliation":''
             },
         ],
-        resourceType: [{'value': '', 'type': ''},],
+        resourceType: [{'value': '', 'resourceTypeGeneral': ''},],
         subjects: [
-            {"subject": '', "subjectScheme": '', "subjectSchemeUri": '', "subjectValueURI":'',
+            {"subject": '', "subjectScheme": '', "schemeURI": '', "valueURI":'', "xml:lang":''
             },
         ],
         contributors: [
             {"contributorName": '', "contributorType": '',"givenName": '', "familyName": '', "nameIdentifier":'',
-                "schemeURI": '', "nameIdentifierScheme": '', "affiliation":'', "affiliationIdentifier":'', "affiliationIdentifierScheme":'',
+                "schemeURI": '', "nameIdentifierScheme": '', "affiliation":'', "xml:lang":'',
             },
         ],
         relatedIdentifiers:[{
             "relatedIdentifier":'', "relatedIdentifierType":'',"relationType":'',"relatedMetaDataScheme":'', "schemeURI":'',
-            "resourceTypeGeneral":'',
         },
         ],
         descriptions:[
             {
-                "value": '', "descriptionType": '',},
+                "value": '', "xml:lang":'', "descriptionType": 'Abstract',},
 
         ],
         alternateIdentifiers:[{
@@ -160,11 +161,11 @@ function getStepContent(step) {
             "value":'',
         },],
         rightsList:[{
-            "schemeURI":'', "rightsIdentifierScheme":'',"rightsIdentifier":'',"rightsURI":''
+            "schemeURI":'', "rightsIdentifierScheme":'',"rightsIdentifier":'',"rightsURI":'', "xml:lang":''
         },
         ],
         fundingReferences:[{
-            "funderName":'', "funderIdentifier":'',"funderIdentifierType":'',"awardNumber":'', "awardTitle":'',
+            "funderName":'', "funderIdentifier":'',"funderIdentifierType":'',"awardNumber":'', "awardTitle":'', "awardURI":'',
         },
         ],
         geoLocations:[{"geoLocationPlace": '', "geoLocationPoint": '', "pointLongitude": '', "pointLatitude": '', "geoLocationBox": '',
@@ -185,12 +186,9 @@ function getStepContent(step) {
                         }, 500);
                     }}
                 >
-                    {({values}) => (
+                    {({values, isSubmitting}) => (
                         <Form>
                             {/* MANDATORY ELEMENTS*/}
-                            {/* Identifier hidden attribute DOI; deal later
-                              - simple Field'larda
-                            "A component is changing an uncontrolled input of type text to be controlled" warning appears.*/}
                             <Identifier identifier={values.identifier}/>
                             <Titles titles={values.titles}/>
                             {/* Creators have nested dynamic form; deal later*/}
@@ -198,8 +196,10 @@ function getStepContent(step) {
                             <Publisher publisher={values.publisher}/>
                             <PublicationYear publicationYear={values.publicationYear}/>
                             <ResourceType resourceType = {values.resourceType}/>
-
-
+                            <pre>{JSON.stringify(values, null, 2)}</pre>
+                            <Button type="submit" disabled={isSubmitting}>
+                                Submit
+                            </Button>
                         </Form>
                     )}
                 </Formik>
@@ -215,7 +215,7 @@ function getStepContent(step) {
                         }, 500);
                     }}
                 >
-                    {({values}) => (
+                    {({values, isSubmitting}) => (
                         <Form>
                             {/* RECOMMENDED ELEMENTS*/}
                             <Subjects subjects={values.subjects}/>
@@ -230,6 +230,10 @@ function getStepContent(step) {
                             have tried the normal way pointLongitude, pointLatitude duplicate keys error happened.
                              see geoLocationPoint and polygonPoint */}
                             <GeoLocations geoLocations = {values.geoLocations}/>
+
+                            <Button type="submit" disabled={isSubmitting}>
+                                Submit
+                            </Button>
                         </Form>
                     )}
                 </Formik>
@@ -245,7 +249,7 @@ function getStepContent(step) {
                         }, 500);
                     }}
                 >
-                    {({values}) => (
+                    {({values, isSubmitting}) => (
                         <Form>
                             {/* OTHER ELEMENTS*/}
                             <Language language={values.language}/>
@@ -257,7 +261,9 @@ function getStepContent(step) {
                             <RightsList rightsList={values.rightsList}/>
                             <FundingReferences fundingReferences={values.fundingReferences}/>
 
-                            <pre>{JSON.stringify(values, null, 2)}</pre>
+                            <Button type="submit" disabled={isSubmitting}>
+                                Submit
+                            </Button>
                         </Form>
                     )}
                 </Formik>
@@ -323,6 +329,7 @@ function App () {
                                             <Button onClick={handleBack} className={classes.button}>
                                                 Back
                                             </Button>
+
                                         )}
                                         <Button
                                             variant="contained"

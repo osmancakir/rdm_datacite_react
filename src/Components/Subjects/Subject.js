@@ -1,21 +1,70 @@
 import React from 'react';
 import {FastField} from 'formik';
-import {Grid} from '@material-ui/core';
+import {
+    InputLabel,
+    MenuItem,
+    FormControl,
+    Grid,
+} from '@material-ui/core';
 
-import {TextField} from 'formik-material-ui';
+import {TextField, Select} from 'formik-material-ui';
 
 const Subject = (props) => {
 
     const {index} = props;
     /* select options are here*/
-
+    const subjectSchemeTypes = [
+        "GND",
+        "wikidata",
+        "dewey",
+    ];
 
     return (
         <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={9}>
                 <FastField
                     name={`subjects.${index}.subject`}
-                    label="subject"
+                    label="Subject"
+                    fullWidth
+                    required={false}
+                    component={TextField}
+                />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+                <FastField
+                    name={`subjects.${index}.xml:lang`}
+                    label="Language"
+                    fullWidth
+                    required={true}
+                    component={TextField}
+                />
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+                <FormControl required fullWidth>
+                    <InputLabel shrink variant={"outlined"}>
+                        subjectScheme
+                    </InputLabel>
+                    <FastField
+                        required
+                        fullWidth
+                        component={Select}
+                        name={`subjects.${index}.subjectScheme`}
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        {subjectSchemeTypes.map((subjectScheme) =>
+                            <MenuItem key={subjectScheme}
+                                      value={subjectScheme}>{subjectScheme}</MenuItem>,
+                        )}
+                    </FastField>
+                </FormControl>
+            </Grid>
+            <Grid item xs={6}>
+                <FastField
+                    name={`subjects.${index}.schemeURI`}
+                    label="Scheme URI"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -23,26 +72,8 @@ const Subject = (props) => {
             </Grid>
             <Grid item xs={6}>
                 <FastField
-                    name={`subjects.${index}.subjectScheme`}
-                    label="subjectScheme"
-                    fullWidth
-                    required={false}
-                    component={TextField}
-                />
-            </Grid>
-            <Grid item xs={6}>
-                <FastField
-                    name={`subjects.${index}.subjectSchemeUri`}
-                    label="subjectSchemeUri"
-                    fullWidth
-                    required={false}
-                    component={TextField}
-                />
-            </Grid>
-            <Grid item xs={6}>
-                <FastField
-                    name={`subjects.${index}.subjectValueURI`}
-                    label="subjectValueURI"
+                    name={`subjects.${index}.valueURI`}
+                    label="Value URI"
                     fullWidth
                     required={false}
                     component={TextField}

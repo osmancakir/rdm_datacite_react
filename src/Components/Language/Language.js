@@ -21,10 +21,9 @@ const Language = (props) => {
                                 {language.length > 0 &&
                                 language.map((language, index) => (
                                     <Grid container key={index}>
-
                                         <Grid item xs={12}>
                                             <FastField
-                    name={`language.${index}.value`}
+                                                name={`language.${index}.value`}
                                                 label="Language"
                                                 fullWidth
                                                 required={true}

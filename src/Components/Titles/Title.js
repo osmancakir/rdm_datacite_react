@@ -22,10 +22,19 @@ const Title = (props) => {
 
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={9}>
                 <FastField
                     name={`titles.${index}.value`}
                     label="Title"
+                    fullWidth
+                    required={true}
+                    component={TextField}
+                />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+                <FastField
+                    name={`titles.${index}.xml:lang`}
+                    label="Language"
                     fullWidth
                     required={true}
                     component={TextField}

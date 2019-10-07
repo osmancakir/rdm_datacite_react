@@ -47,6 +47,15 @@ const Rights = (props) => {
                     component={TextField}
                 />
             </Grid>
+            <Grid item xs={6} sm={3}>
+                <FastField
+                    name={`rightsList.${index}.xml:lang`}
+                    label="Language"
+                    fullWidth
+                    required={false}
+                    component={TextField}
+                />
+            </Grid>
 
         </Grid>
     );

@@ -13,14 +13,25 @@ const Description = (props) => {
 
     const {index} = props;
     /* select options are here*/
-    const descriptionTypes = ["Abstract", "Methods", "SeriesInformation", "TableOfContents", "TechnicalInfo", "Other"];
+    const descriptionTypes = ["Abstract", "Methods", "TechnicalInfo",];
 
     return (
         <Grid container spacing ={3}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={9}>
                 <FastField
                     name={`descriptions.${index}.value`}
                     label="Description"
+                    fullWidth
+                    required={false}
+                    multiline={true}
+                    rows={5}
+                    component={TextField}
+                />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+                <FastField
+                    name={`descriptions.${index}.xml:lang`}
+                    label="Language"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -37,9 +48,10 @@ const Description = (props) => {
                         component={Select}
                         name={`descriptions.${index}.descriptionType`}
                     >
+                        {/*Abstract Option Made default:
                         <MenuItem value="">
                             <em>None</em>
-                        </MenuItem>
+                        </MenuItem>*/}
                         {descriptionTypes.map((descriptionType) =>
                             <MenuItem key={descriptionType}
                                       value={descriptionType}>{descriptionType}</MenuItem>,

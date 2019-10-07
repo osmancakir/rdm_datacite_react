@@ -13,7 +13,7 @@ const FundingReference = (props) => {
 
     const {index} = props;
     /* select options are here*/
-    const funderIdentifierTypes = ["Crossref Funder ID", "GRID", "ISNI", "Other"]
+    const funderIdentifierTypes = ["cordis", "DFG", "FWF",]
 
     return (
         <React.Fragment>
@@ -61,6 +61,15 @@ const FundingReference = (props) => {
                 <FastField
                     name={`fundingReferences.${index}.awardNumber`}
                     label="Award Number"
+                    fullWidth
+                    required={false}
+                    component={TextField}
+                />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+                <FastField
+                    name={`fundingReferences.${index}.awardURI`}
+                    label="Award URI"
                     fullWidth
                     required={false}
                     component={TextField}

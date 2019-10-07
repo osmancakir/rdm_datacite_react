@@ -8,9 +8,8 @@ const ResourceType = (props) => {
 
     const {resourceType} = props;
     const resTypes = [
-        "Audiovisual", "Collection", "Dataset", "Event", "Image",
-        "InteractiveResource", "Model", "PhysicalObject", "Service",
-        "Software", "Sound", "Text", "Workflow", "Other"];
+        "Audiovisual", "Collection", "Dataset", "Image",
+        "Model","Software", "Sound", "Text", "Workflow", "Other"];
 
     return (
         <React.Fragment>
@@ -24,11 +23,9 @@ const ResourceType = (props) => {
                                 {resourceType.length > 0 &&
                                 resourceType.map((resType, index) => (
                                     <Grid container key={index}>
-                                        {/* Here actually didn't understand much how index is used*/}
-                                        {/* but here with Fieldarray +- operations are done.*/}
                                         <Grid item xs={12}>
                                             <FastField
-                    name={`resourceType.${index}.value`}
+                                                name={`resourceType.${index}.value`}
                                                 label="Resource Type"
                                                 fullWidth
                                                 required={true}
@@ -44,7 +41,7 @@ const ResourceType = (props) => {
                                                     required
                                                     fullWidth
                                                     component={Select}
-                                                    name={`resourceType.${index}.type`}
+                                                    name={`resourceType.${index}.resourceTypeGeneral`}
                                                 >
                                                     <MenuItem value="">
                                                         <em>None</em>

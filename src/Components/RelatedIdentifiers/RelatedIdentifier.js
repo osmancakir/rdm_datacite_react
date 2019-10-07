@@ -16,10 +16,21 @@ const RelatedIdentifier = (props) => {
     const relatedIdentifierTypes = ["ARK", "arXiv", "bibcode", "DOI", "EAN13", "EISSN", "Handle", "IGSN", "ISBN",
         "ISSN", "ISTC", "LISSN", "LSID", "PMID", "PURL", "UPC", "URL", "URN"];
 
-    const relationTypes = ["IsCitedBy", "Cites", "IsSupplementTo", "IsSupplementedBy", "IsContinuedBy", "Continues",
-        "HasMetadata", "IsMetadataFor", "IsNewVersionOf", "IsPreviousVersionOf", "IsPartOf", "HasPart", "IsReferencedBy",
-        "References", "IsDocumentedBy", "Documents", "IsCompiledBy", "Compiles", "IsVariantFormOf", "IsOriginalFormOf",
-        "IsIdenticalTo", "IsReviewedBy", "Reviews", "IsDerivedFrom", "IsSourceOf"];
+    const relationTypes = [
+        "Cites/IsCitedBy",
+        "Describes/IsDescribedBy",
+        "HasPart/IsPartOf",
+        "HasMetadata",
+        "HasVersion",
+        "IsVersionOf",
+        "IsNewVersionOf/IsPreviousVersionOf",
+        "IsCompiledBy/IsSourceOf",
+        "References/IsReferencedBy",
+        "IsVariantFormOf",
+        "IsIdenticalTo",
+        "IsSupplemtentedBy/Supplements",
+        "IsDocumentedBy/Documents",
+         ];
 
 
     return (
@@ -94,15 +105,7 @@ const RelatedIdentifier = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item>
-                <FastField
-                    name={`relatedIdentifiers.${index}.resourceTypeGeneral`}
-                    label="Resource Type General"
-                    fullWidth
-                    required={false}
-                    component={TextField}
-                />
-            </Grid>
+
         </Grid>
     );
 };

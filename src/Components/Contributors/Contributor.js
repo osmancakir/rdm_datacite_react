@@ -13,10 +13,13 @@ const Contributor = (props) => {
 
     const {index} = props;
     /* select options are here*/
-    const contributorTypes = ["ContactPerson", "DataCollector", "DataCurator", "DataManager", "Distributor",
-        "Editor", "HostingInstitution", "Producer", "ProjectLeader", "ProjectManager", "ProjectMember",
-        "RegistrationAgency", "RegistrationAuthority", "RelatedPerson", "Researcher", "ResearchGroup",
-        "RightsHolder", "Sponsor", "Supervisor", "WorkPackageLeader", "Other"];
+    const contributorTypes = ["DataCollector", "DataCurator", "HostingInstitution", "ProjectLeader", "ProjectManager", "ProjectMember",
+        "Researcher", "RightsHolder", "WorkPackageLeader"];
+    const nameIdentifierScheme = [
+        "ORCID",
+        "GND",
+
+    ];
 
     return (
         <React.Fragment>
@@ -79,18 +82,29 @@ const Contributor = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <FastField
-                    name={`contributors.${index}.schemeURI`}
-                    label="Scheme URI"
-                    fullWidth
-                    required={false}
-                    component={TextField}
-                />
+                <FormControl fullWidth>
+                    <InputLabel shrink variant={"outlined"}>
+                        nameIdentifierScheme
+                    </InputLabel>
+                    <FastField
+                        fullWidth
+                        component={Select}
+                        name={`creators.${index}.nameIdentifierScheme`}
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        {nameIdentifierScheme.map((nameIdentifierScheme) =>
+                            <MenuItem key={nameIdentifierScheme}
+                                      value={nameIdentifierScheme}>{nameIdentifierScheme}</MenuItem>,
+                        )}
+                    </FastField>
+                </FormControl>
             </Grid>
             <Grid item xs={12} sm={6}>
                 <FastField
-                    name={`contributors.${index}.nameIdentifierScheme`}
-                    label="Name Identifier Scheme"
+                    name={`contributors.${index}.schemeURI`}
+                    label="Scheme URI"
                     fullWidth
                     required={false}
                     component={TextField}
@@ -107,17 +121,8 @@ const Contributor = (props) => {
             </Grid>
             <Grid item xs={12} sm={6}>
                 <FastField
-                    name={`contributors.${index}.affiliationIdentifier`}
-                    label="Affiliation Identifier"
-                    fullWidth
-                    required={false}
-                    component={TextField}
-                />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-                <FastField
-                    name={`contributors.${index}.affiliationIdentifierScheme`}
-                    label="Affiliation Identifier Scheme"
+                    name={`contributors.${index}.xml:lang`}
+                    label="Language"
                     fullWidth
                     required={false}
                     component={TextField}

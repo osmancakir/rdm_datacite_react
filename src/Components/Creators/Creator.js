@@ -1,13 +1,17 @@
 import React from 'react';
 import {FastField} from 'formik';
-import {Grid} from '@material-ui/core';
+import {FormControl, Grid, InputLabel, MenuItem} from '@material-ui/core';
 
-import {TextField} from 'formik-material-ui';
+import {Select, TextField} from 'formik-material-ui';
 
 const Creator = (props) => {
 
     const {index} = props;
+    const nameIdentifierScheme = [
+        "ORCID",
+        "GND",
 
+    ];
 
     return (
         <React.Fragment>
@@ -16,6 +20,15 @@ const Creator = (props) => {
                 <FastField
                     name={`creators.${index}.creatorName`}
                     label="creatorName"
+                    fullWidth
+                    required={true}
+                    component={TextField}
+                />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+                <FastField
+                    name={`creators.${index}.nameType`}
+                    label="nameType"
                     fullWidth
                     required={true}
                     component={TextField}
@@ -44,33 +57,44 @@ const Creator = (props) => {
                     name={`creators.${index}.nameIdentifier`}
                     label="nameIdentifier"
                     fullWidth
-                    required={true}
-                    component={TextField}
-                />
-            </Grid>
-            <Grid item xs={12} sm={6} >
-                <FastField
-                    name={`creators.${index}.nameIdScheme`}   // "":'', "":'', ""
-                    label="nameIdScheme"
-                    fullWidth
-                    required={true}
+                    required={false}
                     component={TextField}
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
+                <FormControl fullWidth>
+                    <InputLabel shrink variant={"outlined"}>
+                        nameIdentifierScheme
+                    </InputLabel>
+                    <FastField
+                        fullWidth
+                        component={Select}
+                        name={`creators.${index}.nameIdentifierScheme`}
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        {nameIdentifierScheme.map((nameIdentifierScheme) =>
+                            <MenuItem key={nameIdentifierScheme}
+                                      value={nameIdentifierScheme}>{nameIdentifierScheme}</MenuItem>,
+                        )}
+                    </FastField>
+                </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={6}>
                 <FastField
-                    name={`creators.${index}.identifierSchemeUri`}
-                    label="identifierSchemeUri"
+                    name={`creators.${index}.schemeURI`}
+                    label="schemeURI"
                     fullWidth
-                    required={true}
+                    required={false}
                     component={TextField}
                 />
             </Grid>
 
             <Grid item xs={12} sm={6}>
                 <FastField
-                    name={`creators.${index}.creatorAffiliation`}
-                    label="creatorAffiliation"
+                    name={`creators.${index}.affiliation`}
+                    label="affiliation"
                     fullWidth
                     required={true}
                     component={TextField}
