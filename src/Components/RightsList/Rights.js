@@ -11,7 +11,7 @@ const Rights = (props) => {
 
     return (
         <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <FastField
                     name={`rightsList.${index}.schemeURI`}
                     label="Scheme URI"
@@ -20,7 +20,7 @@ const Rights = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <FastField
                     name={`rightsList.${index}.rightsIdentifierScheme`}
                     label="Rights Identifier Scheme"
@@ -29,7 +29,7 @@ const Rights = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <FastField
                     name={`rightsList.${index}.rightsIdentifier`}
                     label="Rights Identifier"
@@ -38,7 +38,7 @@ const Rights = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <FastField
                     name={`rightsList.${index}.rightsURI`}
                     label="Rights URI"

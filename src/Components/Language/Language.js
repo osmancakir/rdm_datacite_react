@@ -13,32 +13,25 @@ const Language = (props) => {
         <React.Fragment>
             <Typography variant="h6" gutterBottom>Language:</Typography>
             <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <FieldArray
-                        name="language"
-                        render={({move, swap, push, insert, unshift, pop}) => (
-                            <Grid container>
-                                {language.length > 0 &&
-                                language.map((language, index) => (
-                                    <Grid container key={index}>
-                                        <Grid item xs={12}>
-                                            <FastField
-                                                name={`language.${index}.value`}
-                                                label="Language"
-                                                fullWidth
-                                                required={true}
-                                                component={TextField}
-                                            />
-                                        </Grid>
-
-
-                                    </Grid>
-                                ))}
-
-                            </Grid>
-                        )}
-                    />
-                </Grid>
+                <FieldArray
+                    name="language"
+                    render={() => (
+                        <React.Fragment>
+                            {language.length > 0 &&
+                            language.map((language, index) => (
+                                <Grid item xs={12} key={index}>
+                                    <FastField
+                                        name={`language.${index}.value`}
+                                        label="Language"
+                                        fullWidth
+                                        required={true}
+                                        component={TextField}
+                                    />
+                                </Grid>
+                            ))}
+                        </React.Fragment>
+                    )}
+                />
             </Grid>
         </React.Fragment>
     );

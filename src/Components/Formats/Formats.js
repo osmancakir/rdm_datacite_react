@@ -1,6 +1,6 @@
 import React from 'react';
 import {FieldArray} from 'formik';
-import {Grid, Typography, Button} from '@material-ui/core';
+import {Typography, Button} from '@material-ui/core';
 import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
 import Format from "./Format";
 
@@ -11,44 +11,40 @@ const Formats = (props) => {
     return (
 <React.Fragment>
     <Typography variant="h6" gutterBottom>Format(s):</Typography>
-        <Grid container spacing={3}>
-            <Grid item xs={12}>
-                <FieldArray
-                    name="sizes"
-                    render={({move, swap, push, insert, unshift, pop}) => (
-                        <Grid container>
-                            {formats.length > 0 &&
-                            formats.map((format, index) => (
-                                <Grid container key={index}>
-                                    {/* Here actually didn't understand much how index is used*/}
-                                    {/* but here with Fieldarray +- operations are done.*/}
-                                    <Grid item xs={12}>
-                                        <Format index={index}/>
-                                    </Grid>
-                                    <Grid item>
-                                        <Button
-                                            variant="contained"
-                                            onClick={() => pop(index)}
-                                        >
-                                            <RemoveIcon/>
-                                        </Button>
-                                    </Grid>
-                                </Grid>
-                            ))}
-                            <Grid item xs={12}>
-                                <Button
-                                    className="secondary"
-                                    variant="contained"
-                                    onClick={() => push({value:''})}
-                                >
-                                    <AddIcon/>
-                                </Button>
-                            </Grid>
-                        </Grid>
-                    )}
-                />
-            </Grid>
-        </Grid>
+        <React.Fragment>
+            <FieldArray
+                name="sizes"
+                render={({move, swap, push, insert, unshift, pop}) => (
+                    <React.Fragment>
+                        {formats.length > 0 &&
+                        formats.map((format, index) => (
+                            <React.Fragment key={index}>
+                                <React.Fragment>
+                                    <Format index={index}/>
+                                </React.Fragment>
+                                <React.Fragment>
+                                    <Button
+                                        variant="contained"
+                                        onClick={() => pop(index)}
+                                    >
+                                        <RemoveIcon/>
+                                    </Button>
+                                </React.Fragment>
+                            </React.Fragment>
+                        ))}
+                        <React.Fragment>
+                            <Button
+                                className="secondary"
+                                variant="contained"
+                                onClick={() => push({value:''})}
+                            >
+                                <AddIcon/>
+                            </Button>
+                        </React.Fragment>
+                    </React.Fragment>
+                )}
+            />
+        </React.Fragment>
 </React.Fragment>
     );
 };

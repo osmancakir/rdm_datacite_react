@@ -1,7 +1,7 @@
 import React from 'react';
 import Date from './Date';
 import {FieldArray} from 'formik';
-import {Grid, Typography, Button} from '@material-ui/core';
+import {Typography, Button} from '@material-ui/core';
 import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
 
 const Dates = (props) => {
@@ -13,49 +13,42 @@ const Dates = (props) => {
           <Typography variant="h6" gutterBottom>
               Dates:
           </Typography>
-    <Grid container spacing={3}>
-
-        <Grid item xs={12}>
+        <React.Fragment>
             <FieldArray
                 name="dates"
                 render={({move, swap, push, insert, unshift, pop}) => (
-                    <Grid container>
-                        <Grid item xs={12}>
-                            {dates.length > 0 &&
-                            dates.map((date, index) => (
-                                <Grid container key={index}>
-                                    {/* Here actually didn't understand much how index is used*/}
-                                    {/* but here with Fieldarray +- operations are done.*/}
-                                    <Grid item>
-                                        <Date index={index}/>
-                                    </Grid>
+                    <React.Fragment>
+                        {dates.length > 0 &&
+                        dates.map((date, index) => (
+                            <React.Fragment key={index}>
+                                <React.Fragment>
+                                    <Date index={index}/>
+                                </React.Fragment>
 
-                                        <Button
-                                            variant="contained"
-                                            onClick={() => pop(index)}
-                                        >
-                                            <RemoveIcon/>
-                                        </Button>
+                                <Button
+                                    variant="contained"
+                                    onClick={() => pop(index)}
+                                >
+                                    <RemoveIcon/>
+                                </Button>
 
-                                </Grid>
-                            ))}
+                            </React.Fragment>
+                        ))}
 
-                        </Grid>
 
-                            <Button
-                                className="secondary"
-                                variant="contained"
-                                onClick={() => push(
-                                    {value: '', type: '', information: ''})}
-                            >
-                                <AddIcon/>
-                            </Button>
+                        <Button
+                            className="secondary"
+                            variant="contained"
+                            onClick={() => push(
+                                {value: '', type: '', information: ''})}
+                        >
+                            <AddIcon/>
+                        </Button>
 
-                    </Grid>
+                    </React.Fragment>
                 )}
             />
-        </Grid>
-    </Grid>
+        </React.Fragment>
       </React.Fragment>
 );
 };

@@ -31,6 +31,8 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import InitialValues from './Components/InitialValues'
+
 
 
 
@@ -84,95 +86,7 @@ const useStyles = makeStyles(theme =>
 const steps = ['Mandatory Elements', 'Recommended Elements', 'Other Elements'];
 
 function getStepContent(step) {
-    const initialValues = {
-        identifier: [
-            {
-                'value': '',
-                'identifierType': 'DOI',
-            },
-            ],
-        language: [
-            {
-                'value': '',
-            },
-        ],
-        publicationYear: [
-            {
-                'value': '',
-                "xml:lang":''
-            },
-        ],
-        publisher: [
-            {
-                'value': '',
-            },
-        ],
-        version: [
-            {
-                'value': '',
-            },
-        ],
-        dates: [
-            {
-                'value': '2019-09-13T12:21',
-                'type': 'Accepted',
-                'information':''
-            },
-
-        ],
-        titles: [
-            {
-                "value":"",
-                "type":"",
-                "xml:lang":""
-            }
-        ],
-        creators: [
-            {"creatorName": '', "nameType":'Organizational', "givenName": '', "familyName": '', "nameIdentifier":'',
-                "nameIdentifierScheme":'', "schemeURI":'', "affiliation":''
-            },
-        ],
-        resourceType: [{'value': '', 'resourceTypeGeneral': ''},],
-        subjects: [
-            {"subject": '', "subjectScheme": '', "schemeURI": '', "valueURI":'', "xml:lang":''
-            },
-        ],
-        contributors: [
-            {"contributorName": '', "contributorType": '',"givenName": '', "familyName": '', "nameIdentifier":'',
-                "schemeURI": '', "nameIdentifierScheme": '', "affiliation":'', "xml:lang":'',
-            },
-        ],
-        relatedIdentifiers:[{
-            "relatedIdentifier":'', "relatedIdentifierType":'',"relationType":'',"relatedMetaDataScheme":'', "schemeURI":'',
-        },
-        ],
-        descriptions:[
-            {
-                "value": '', "xml:lang":'', "descriptionType": 'Abstract',},
-
-        ],
-        alternateIdentifiers:[{
-            "value":'', "alternateIdentifierType":'',
-        }],
-        sizes:[{
-            "value":'',
-        },],
-        formats:[{
-            "value":'',
-        },],
-        rightsList:[{
-            "schemeURI":'', "rightsIdentifierScheme":'',"rightsIdentifier":'',"rightsURI":'', "xml:lang":''
-        },
-        ],
-        fundingReferences:[{
-            "funderName":'', "funderIdentifier":'',"funderIdentifierType":'',"awardNumber":'', "awardTitle":'', "awardURI":'',
-        },
-        ],
-        geoLocations:[{"geoLocationPlace": '', "geoLocationPoint": '', "pointLongitude": '', "pointLatitude": '', "geoLocationBox": '',
-            "westBoundLongitude":'', "eastBoundLongitude":'', "southBoundLatitude":'', "northBoundLatitude":'', "geoLocationPolygon":''
-        },
-        ]
-    };
+    const initialValues = InitialValues
 
     switch (step) {
         case 0:
@@ -197,9 +111,6 @@ function getStepContent(step) {
                             <PublicationYear publicationYear={values.publicationYear}/>
                             <ResourceType resourceType = {values.resourceType}/>
                             <pre>{JSON.stringify(values, null, 2)}</pre>
-                            <Button type="submit" disabled={isSubmitting}>
-                                Submit
-                            </Button>
                         </Form>
                     )}
                 </Formik>
@@ -230,10 +141,6 @@ function getStepContent(step) {
                             have tried the normal way pointLongitude, pointLatitude duplicate keys error happened.
                              see geoLocationPoint and polygonPoint */}
                             <GeoLocations geoLocations = {values.geoLocations}/>
-
-                            <Button type="submit" disabled={isSubmitting}>
-                                Submit
-                            </Button>
                         </Form>
                     )}
                 </Formik>
@@ -260,10 +167,6 @@ function getStepContent(step) {
                             <Version version={values.version}/>
                             <RightsList rightsList={values.rightsList}/>
                             <FundingReferences fundingReferences={values.fundingReferences}/>
-
-                            <Button type="submit" disabled={isSubmitting}>
-                                Submit
-                            </Button>
                         </Form>
                     )}
                 </Formik>

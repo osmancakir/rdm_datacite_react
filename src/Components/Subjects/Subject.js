@@ -21,7 +21,7 @@ const Subject = (props) => {
 
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12} sm={9}>
+            <Grid item xs={12} sm={6}>
                 <FastField
                     name={`subjects.${index}.subject`}
                     label="Subject"
@@ -30,7 +30,7 @@ const Subject = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={12} sm={3}>
+            <Grid item xs={12} sm={6}>
                 <FastField
                     name={`subjects.${index}.xml:lang`}
                     label="Language"
@@ -61,7 +61,7 @@ const Subject = (props) => {
                     </FastField>
                 </FormControl>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <FastField
                     name={`subjects.${index}.schemeURI`}
                     label="Scheme URI"
@@ -70,7 +70,7 @@ const Subject = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
                 <FastField
                     name={`subjects.${index}.valueURI`}
                     label="Value URI"

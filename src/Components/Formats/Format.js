@@ -7,14 +7,8 @@ import {TextField} from 'formik-material-ui';
 const Format = (props) => {
 
     const {index} = props;
-
-
-
     return (
         <Grid container>
-
-
-
             <Grid item xs={12}>
                 <FastField
                     name={`formats.${index}.value`}
@@ -24,8 +18,6 @@ const Format = (props) => {
                     component={TextField}
                 />
             </Grid>
-
-
         </Grid>
     );
 };

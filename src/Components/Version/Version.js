@@ -12,31 +12,25 @@ const Version = (props) => {
     return (
         <React.Fragment>
             <Typography variant="h6" gutterBottom>Version:</Typography>
-            <Grid container spacing={3}>
+            <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <FieldArray
                         name="version"
-                        render={({move, swap, push, insert, unshift, pop}) => (
-                            <Grid container>
+                        render={() => (
+                            <React.Fragment>
                                 {version.length > 0 &&
                                 version.map((version, index) => (
-                                    <Grid container key={index}>
-
-                                        <Grid item xs={12}>
-                                            <FastField
-                    name={`version.${index}.value`}
-                                                label="Version"
-                                                fullWidth
-                                                required={true}
-                                                component={TextField}
-                                            />
-                                        </Grid>
-
-
+                                    <Grid item xs={12} key={index}>
+                                        <FastField
+                                            name={`version.${index}.value`}
+                                            label="Version"
+                                            fullWidth
+                                            required={true}
+                                            component={TextField}
+                                        />
                                     </Grid>
                                 ))}
-
-                            </Grid>
+                            </React.Fragment>
                         )}
                     />
                 </Grid>

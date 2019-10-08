@@ -44,7 +44,7 @@ const RelatedIdentifier = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs = {6}>
+            <Grid item xs = {12} sm={6}>
                 <FormControl fullWidth>
                     <InputLabel shrink>
                         relatedIdentifierType
@@ -65,7 +65,7 @@ const RelatedIdentifier = (props) => {
                     </FastField>
                 </FormControl>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs = {12} sm={6}>
                 <FormControl fullWidth>
                     <InputLabel shrink>
                         relationType
@@ -87,7 +87,7 @@ const RelatedIdentifier = (props) => {
                 </FormControl>
             </Grid>
 
-            <Grid item xs ={6}>
+            <Grid item xs = {12} sm={6}>
                 <FastField
                     name={`relatedIdentifiers.${index}.relatedMetaDataScheme`}
                     label="Related Meta Data Scheme"
@@ -96,7 +96,7 @@ const RelatedIdentifier = (props) => {
                     component={TextField}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs = {12} sm={6}>
                 <FastField
                     name={`relatedIdentifiers.${index}.schemeURI`}
                     label="Scheme URI"
