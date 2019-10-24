@@ -110,7 +110,7 @@ function getStepContent(step) {
                             <Publisher publisher={values.publisher}/>
                             <PublicationYear publicationYear={values.publicationYear}/>
                             <ResourceType resourceType = {values.resourceType}/>
-                            <pre>{JSON.stringify(values, null, 2)}</pre>
+                            {/*<pre>{JSON.stringify(values, null, 2)}</pre>*/}
                         </Form>
                     )}
                 </Formik>

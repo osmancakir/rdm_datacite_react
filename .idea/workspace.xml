@@ -2,33 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf572936-2565-4c77-b1a9-94489dcf5fe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/InitialValues.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/AlternateIdentifiers/AlternateIdentifiers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AlternateIdentifiers/AlternateIdentifiers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Contributors/Contributor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Contributors/Contributor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Contributors/Contributors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Contributors/Contributors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Creators/Creators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Creators/Creators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Dates/Dates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Dates/Dates.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Descriptions/Descriptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Descriptions/Descriptions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Formats/Format.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Formats/Format.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Formats/Formats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Formats/Formats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/FundingReferences/FundingReferences.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FundingReferences/FundingReferences.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GeoLocations/GeoLocations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GeoLocations/GeoLocations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Identifier/Identifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Identifier/Identifier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Language/Language.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Language/Language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PublicationYear/PublicationYear.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PublicationYear/PublicationYear.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Publisher/Publisher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Publisher/Publisher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RelatedIdentifiers/RelatedIdentifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RelatedIdentifiers/RelatedIdentifier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RelatedIdentifiers/RelatedIdentifiers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RelatedIdentifiers/RelatedIdentifiers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ResourceType/ResourceType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ResourceType/ResourceType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RightsList/Rights.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RightsList/Rights.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RightsList/RigtsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RightsList/RigtsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sizes/Sizes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sizes/Sizes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Subjects/Subject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Subjects/Subject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Subjects/Subjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Subjects/Subjects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Titles/Titles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Titles/Titles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Version/Version.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Version/Version.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/InitialValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/InitialValues.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +29,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react_data_dashboard/react-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -120,7 +98,13 @@
       <workItem from="1570353233840" duration="25748000" />
       <workItem from="1570433154890" duration="7697000" />
       <workItem from="1570474991686" duration="10281000" />
-      <workItem from="1570486444410" duration="7237000" />
+      <workItem from="1570486444410" duration="7363000" />
+      <workItem from="1570520766043" duration="6720000" />
+      <workItem from="1570635759997" duration="658000" />
+      <workItem from="1570707347346" duration="484000" />
+      <workItem from="1570711680039" duration="6000" />
+      <workItem from="1571590066539" duration="1938000" />
+      <workItem from="1571921012608" duration="1274000" />
     </task>
     <servers />
   </component>
