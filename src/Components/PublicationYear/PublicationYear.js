@@ -19,8 +19,8 @@ const PublicationYear = (props) => {
                         <React.Fragment>
                             {publicationYear.length > 0 &&
                             publicationYear.map((publicationYear, index) => (
-                                <React.Fragment>
-                                <Grid item xs={12} sm={6} key={index}>
+                                <React.Fragment key={index}>
+                                <Grid item xs={12} sm={6}>
                                     <FastField
                                         name={`publicationYear.${index}.value`}
                                         label="Publication Year (YYYY)"

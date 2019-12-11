@@ -1,3 +1,9 @@
+
+//import Identifier from "./Identifier/Identifier"; Identifier
+
+
+
+
 export default {
     identifier: [
         {
@@ -19,6 +25,7 @@ export default {
     publisher: [
         {
             'value': '',
+            'xml:lang':'',
         },
     ],
     version: [

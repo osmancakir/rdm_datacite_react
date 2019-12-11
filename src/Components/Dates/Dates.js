@@ -20,7 +20,7 @@ const Dates = (props) => {
                     <React.Fragment>
                         {dates.length > 0 &&
                         dates.map((date, index) => (
-                            <React.Fragment key={index}>
+                            <React.Fragment key={index}> {/*this is probably where you need to give ids */}
                                 <React.Fragment>
                                     <Date index={index}/>
                                 </React.Fragment>

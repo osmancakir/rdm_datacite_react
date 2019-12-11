@@ -19,7 +19,8 @@ const Language = (props) => {
                         <React.Fragment>
                             {language.length > 0 &&
                             language.map((language, index) => (
-                                <Grid item xs={12} key={index}>
+                                <React.Fragment key={index}>
+                                <Grid item xs={12}>
                                     <FastField
                                         name={`language.${index}.value`}
                                         label="Language"
@@ -28,6 +29,7 @@ const Language = (props) => {
                                         component={TextField}
                                     />
                                 </Grid>
+                                </React.Fragment>
                             ))}
                         </React.Fragment>
                     )}

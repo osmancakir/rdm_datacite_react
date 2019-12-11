@@ -19,8 +19,8 @@ const Publisher = (props) => {
                         <React.Fragment>
                             {publisher.length > 0 &&
                             publisher.map((publisher, index) => (
-                                <React.Fragment>
-                                    <Grid item xs={12} sm={9} key={index}>
+                                <React.Fragment key={index}>
+                                    <Grid item xs={12} sm={9} >
                                     <FastField
                                         name={`publisher.${index}.value`}
                                         label="Publisher"
@@ -34,10 +34,11 @@ const Publisher = (props) => {
                                             name={`publisher.${index}.xml:lang`}
                                             label="Language"
                                             fullWidth
-                                            required={true}
+                                            required={false}
                                             component={TextField}
                                         />
                                     </Grid>
+
                                 </React.Fragment>
                             ))}
                         </React.Fragment>
