@@ -1,3 +1,3 @@
-import RightsList from './RightsList'
+import RightsList from "./RightsList"
 
 export default RightsList;

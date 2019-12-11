@@ -1,3 +1,3 @@
-import Geolocations from './GeoLocations'
+import Geolocations from "./GeoLocations"
 
 export default Geolocations;

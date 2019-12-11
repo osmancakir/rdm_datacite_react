@@ -1,7 +1,7 @@
-import React from 'react';
-import {FieldArray, FastField} from 'formik';
-import {Grid, Typography} from '@material-ui/core';
-import {TextField} from 'formik-material-ui';
+import React from "react";
+import {FieldArray, FastField} from "formik";
+import {Grid, Typography} from "@material-ui/core";
+import {TextField} from "formik-material-ui";
 
 
 const Version = (props) => {

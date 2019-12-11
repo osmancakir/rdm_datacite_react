@@ -1,3 +1,3 @@
-import Publisher from './Publisher'
+import Publisher from "./Publisher"
 
 export default Publisher;

@@ -1,3 +1,3 @@
-import Sizes from './Sizes'
+import Sizes from "./Sizes"
 
 export default Sizes;

@@ -1,8 +1,8 @@
-import React from 'react';
-import Creator from './Creator';
-import {FieldArray} from 'formik';
-import {Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import Creator from "./Creator";
+import {FieldArray} from "formik";
+import {Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 
 const Creators = (props) => {
 
@@ -39,8 +39,8 @@ const Creators = (props) => {
                                 className="secondary"
                                 variant="contained"
                                 onClick={() => push(
-                                    {CreatorName: '', givenName: '', familyName: '', nameIdentifier:'',
-                                        nameIdScheme:'', identifierSchemeUri:'', creatorAffiliation:''})}
+                                    {CreatorName: "", givenName: "", familyName: "", nameIdentifier:"",
+                                        nameIdScheme:"", identifierSchemeUri:"", creatorAffiliation:""})}
                             >
                                 <AddIcon/>
                             </Button>

@@ -1,3 +1,3 @@
-import FundingReferences from './FundingReferences'
+import FundingReferences from "./FundingReferences"
 
 export default FundingReferences;

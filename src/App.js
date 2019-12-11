@@ -1,9 +1,9 @@
-import {Form, Formik} from 'formik';
-import * as React from 'react';
+import {Form, Formik} from "formik";
+import * as React from "react";
 
-import Creators from './Components/Creators';
-import Identifier from './Components/Identifier/Identifier';
-import Dates from './Components/Dates';
+import Creators from "./Components/Creators";
+import Identifier from "./Components/Identifier/Identifier";
+import Dates from "./Components/Dates";
 import Titles from "./Components/Titles";
 import Publisher from "./Components/Publisher/Publisher";
 import PublicationYear from "./Components/PublicationYear/PublicationYear";
@@ -21,17 +21,17 @@ import RightsList from "./Components/RightsList/RigtsList";
 import FundingReferences from "./Components/FundingReferences";
 import GeoLocations from "./Components/GeoLocations/GeoLocations";
 
-import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Paper from '@material-ui/core/Paper';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import InitialValues from './Components/InitialValues'
+import { makeStyles } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Paper from "@material-ui/core/Paper";
+import Stepper from "@material-ui/core/Stepper";
+import Step from "@material-ui/core/Step";
+import StepLabel from "@material-ui/core/StepLabel";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import InitialValues from "./Components/InitialValues"
 
 
 
@@ -39,16 +39,16 @@ import InitialValues from './Components/InitialValues'
 const useStyles = makeStyles(theme =>
     ({
         appBar: {
-            position: 'relative',
+            position: "relative",
         },
         layout: {
-            width: 'auto',
+            width: "auto",
             marginLeft: theme.spacing(2),
             marginRight: theme.spacing(2),
             [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
                 width: 600,
-                marginLeft: 'auto',
-                marginRight: 'auto',
+                marginLeft: "auto",
+                marginRight: "auto",
             },
         },
         paper: {
@@ -66,24 +66,24 @@ const useStyles = makeStyles(theme =>
 
         },
         buttons: {
-            display: 'flex',
-            justifyContent: 'flex-end',
+            display: "flex",
+            justifyContent: "flex-end",
 
         },
         button: {
             marginTop: theme.spacing(3),
             marginLeft: theme.spacing(1),
-            background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+            background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
             border: 0,
             borderRadius: 3,
-            boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-            color: 'white',
+            boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+            color: "white",
             height: 48,
-            padding: '0 30px',
+            padding: "0 30px",
         },
     }));
 
-const steps = ['Mandatory Elements', 'Recommended Elements', 'Other Elements'];
+const steps = ["Mandatory Elements", "Recommended Elements", "Other Elements"];
 
 function getStepContent(step) {
     const initialValues = InitialValues
@@ -161,7 +161,7 @@ function getStepContent(step) {
                             {/* OTHER ELEMENTS*/}
                             <Language language={values.language}/>
                             <AlternateIdentifiers alternateIdentifiers={values.alternateIdentifiers}/>
-                            {/* Sizes and Formats maybe didn't need array Components. Since they have only one input?*/}
+                            {/* Sizes and Formats maybe didn"t need array Components. Since they have only one input?*/}
                             <Sizes sizes={values.sizes}/>
                             <Formats formats={values.formats}/>
                             <Version version={values.version}/>
@@ -172,7 +172,7 @@ function getStepContent(step) {
                 </Formik>
             </div>;
         default:
-            throw new Error('Unknown step');
+            throw new Error("Unknown step");
     }
 }
 function App () {
@@ -240,7 +240,7 @@ function App () {
                                             onClick={handleNext}
                                             className={classes.button}
                                         >
-                                            {activeStep === steps.length - 1 ? 'Submit' : 'Next'}
+                                            {activeStep === steps.length - 1 ? "Submit" : "Next"}
                                         </Button>
 
                                     </div>

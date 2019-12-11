@@ -1,8 +1,8 @@
-import React from 'react';
-import FundingReference from './FundingReference';
-import {FieldArray} from 'formik';
-import {Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import FundingReference from "./FundingReference";
+import {FieldArray} from "formik";
+import {Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 
 const FundingReferences = (props) => {
 
@@ -37,8 +37,8 @@ const FundingReferences = (props) => {
                                 className="secondary"
                                 variant="contained"
                                 onClick={() => push(
-                                    {funderName: '', funderIdentifier: '',funderIdentifierType: '', awardNumber: '',
-                                        awardTitle:'', })}
+                                    {funderName: "", funderIdentifier: "",funderIdentifierType: "", awardNumber: "",
+                                        awardTitle:"", })}
                             >
                                 <AddIcon/>
                             </Button>

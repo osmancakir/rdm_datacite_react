@@ -1,8 +1,8 @@
-import React from 'react';
-import {FastField} from 'formik';
-import {Grid} from '@material-ui/core';
+import React from "react";
+import {FastField} from "formik";
+import {Grid} from "@material-ui/core";
 
-import {TextField} from 'formik-material-ui';
+import {TextField} from "formik-material-ui";
 
 const GeoLocation = (props) => {
 
@@ -50,7 +50,7 @@ const GeoLocation = (props) => {
             </Grid>
             <Grid item xs={12} sm={6}>
                 <FastField
-                    name={`geoLocations.${index}.geoLocationBox`}   // "":'', "":'', ""
+                    name={`geoLocations.${index}.geoLocationBox`}   // "":"", "":"", ""
                     label="geoLocationBox"
                     fullWidth
                     required={false}
@@ -68,7 +68,7 @@ const GeoLocation = (props) => {
             </Grid>
             <Grid item xs={12} sm={6}>
                 <FastField
-                    name={`geoLocations.${index}.eastBoundLongitude`}   // "":'', "":'', ""
+                    name={`geoLocations.${index}.eastBoundLongitude`}   // "":"", "":"", ""
                     label="eastBoundLongitude"
                     fullWidth
                     required={false}
@@ -86,7 +86,7 @@ const GeoLocation = (props) => {
             </Grid>
             <Grid item xs={12} sm={6}>
                 <FastField
-                    name={`geoLocations.${index}.northBoundLatitude`}   // "":'', "":'', ""
+                    name={`geoLocations.${index}.northBoundLatitude`}   // "":"", "":"", ""
                     label="northBoundLatitude"
                     fullWidth
                     required={false}

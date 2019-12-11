@@ -1,3 +1,3 @@
-import AlternateIdentifiers from './AlternateIdentifiers'
+import AlternateIdentifiers from "./AlternateIdentifiers"
 
 export default AlternateIdentifiers;

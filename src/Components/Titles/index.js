@@ -1,3 +1,3 @@
-import Titles from './Titles'
+import Titles from "./Titles"
 
 export default Titles;

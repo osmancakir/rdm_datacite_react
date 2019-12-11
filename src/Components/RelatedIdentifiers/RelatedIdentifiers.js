@@ -1,8 +1,8 @@
-import React from 'react';
-import RelatedIdentifier from './RelatedIdentifier';
-import {FieldArray} from 'formik';
-import {Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import RelatedIdentifier from "./RelatedIdentifier";
+import {FieldArray} from "formik";
+import {Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 
 const RelatedIdentifiers = (props) => {
 
@@ -37,8 +37,8 @@ const RelatedIdentifiers = (props) => {
                                     className="secondary"
                                     variant="contained"
                                     onClick={() => push(
-                                        {relatedIdentifier:'', relatedIdentifierType:'', relationType:'',
-                                            relatedMetaDataScheme:'', schemeURI:'', resourceTypeGeneral:'',})}
+                                        {relatedIdentifier:"", relatedIdentifierType:"", relationType:"",
+                                            relatedMetaDataScheme:"", schemeURI:"", resourceTypeGeneral:"",})}
                                 >
                                     <AddIcon/>
                                 </Button>

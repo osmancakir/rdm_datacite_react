@@ -1,13 +1,13 @@
-import React from 'react';
-import {FastField} from 'formik';
+import React from "react";
+import {FastField} from "formik";
 import {
     InputLabel,
     MenuItem,
     FormControl,
     Grid,
-} from '@material-ui/core';
+} from "@material-ui/core";
 
-import {TextField, Select} from 'formik-material-ui';
+import {TextField, Select} from "formik-material-ui";
 
 const RelatedIdentifier = (props) => {
 

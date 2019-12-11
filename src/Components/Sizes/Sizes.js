@@ -1,7 +1,7 @@
-import React from 'react';
-import {FieldArray} from 'formik';
-import {Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import {FieldArray} from "formik";
+import {Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 import Size from "./Size";
 
 const Sizes = (props) => {
@@ -36,7 +36,7 @@ const Sizes = (props) => {
                                 <Button
                                     className="secondary"
                                     variant="contained"
-                                    onClick={() => push({value:''})}
+                                    onClick={() => push({value:""})}
                                 >
                                     <AddIcon/>
                                 </Button>

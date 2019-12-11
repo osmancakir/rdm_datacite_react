@@ -1,8 +1,8 @@
-import React from 'react';
-import Date from './Date';
-import {FieldArray} from 'formik';
-import {Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import Date from "./Date";
+import {FieldArray} from "formik";
+import {Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 
 const Dates = (props) => {
 
@@ -40,7 +40,7 @@ const Dates = (props) => {
                             className="secondary"
                             variant="contained"
                             onClick={() => push(
-                                {value: '', type: '', information: ''})}
+                                {value: "", type: "", information: ""})}
                         >
                             <AddIcon/>
                         </Button>

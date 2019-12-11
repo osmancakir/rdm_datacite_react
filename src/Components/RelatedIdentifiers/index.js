@@ -1,3 +1,3 @@
-import RelatedIdentifiers from './RelatedIdentifiers'
+import RelatedIdentifiers from "./RelatedIdentifiers"
 
 export default RelatedIdentifiers;

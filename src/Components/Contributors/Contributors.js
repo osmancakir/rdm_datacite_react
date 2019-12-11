@@ -1,8 +1,8 @@
-import React from 'react';
-import Contributor from './Contributor';
-import {FieldArray} from 'formik';
-import { Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import Contributor from "./Contributor";
+import {FieldArray} from "formik";
+import { Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 
 const Contributors = (props) => {
 
@@ -38,9 +38,9 @@ const Contributors = (props) => {
                                 className="secondary"
                                 variant="contained"
                                 onClick={() => push(
-                                    {contributorName: '', contributorType: '',givenName: '', familyName: '',
-                                        nameIdentifier:'', schemeURI: '', nameIdentifierScheme: '', affiliation:'',
-                                        affiliationIdentifier:'', affiliationIdentifierScheme:'',})}
+                                    {contributorName: "", contributorType: "",givenName: "", familyName: "",
+                                        nameIdentifier:"", schemeURI: "", nameIdentifierScheme: "", affiliation:"",
+                                        affiliationIdentifier:"", affiliationIdentifierScheme:"",})}
                             >
                                 <AddIcon/>
                             </Button>

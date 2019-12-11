@@ -1,8 +1,8 @@
-import React from 'react';
-import AlternateIdentifier from './AlternateIdentifier';
-import {FieldArray} from 'formik';
-import {Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import AlternateIdentifier from "./AlternateIdentifier";
+import {FieldArray} from "formik";
+import {Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 
 const AlternateIdentifiers = (props) => {
 
@@ -20,7 +20,7 @@ const AlternateIdentifiers = (props) => {
                             {alternateIdentifiers.length > 0 &&
                             alternateIdentifiers.map((alternateIdentifier, index) => (
                                 <React.Fragment key={index}>
-                                    {/* Here actually didn't understand much how index is used*/}
+                                    {/* Here actually didn"t understand much how index is used*/}
                                     {/* but here with Fieldarray +- operations are done.*/}
                                     <React.Fragment>
                                         <AlternateIdentifier index={index}/>
@@ -40,7 +40,7 @@ const AlternateIdentifiers = (props) => {
                                     className="secondary"
                                     variant="contained"
                                     onClick={() => push(
-                                        {value: '', alternateIdentifierType: '', })}
+                                        {value: "", alternateIdentifierType: "", })}
                                 >
                                     <AddIcon/>
                                 </Button>

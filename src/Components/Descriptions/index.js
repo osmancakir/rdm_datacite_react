@@ -1,3 +1,3 @@
-import Descriptions from './Descriptions'
+import Descriptions from "./Descriptions"
 
 export default Descriptions;

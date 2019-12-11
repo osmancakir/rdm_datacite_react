@@ -1,7 +1,7 @@
-import React from 'react';
-import {FieldArray, FastField} from 'formik';
-import {Grid, Typography, InputLabel, MenuItem, FormControl,} from '@material-ui/core';
-import {TextField, Select} from 'formik-material-ui';
+import React from "react";
+import {FieldArray, FastField} from "formik";
+import {Grid, Typography, InputLabel, MenuItem, FormControl,} from "@material-ui/core";
+import {TextField, Select} from "formik-material-ui";
 
 
 const ResourceType = (props) => {

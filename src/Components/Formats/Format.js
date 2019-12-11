@@ -1,8 +1,8 @@
-import React from 'react';
-import {FastField} from 'formik';
-import {Grid} from '@material-ui/core';
+import React from "react";
+import {FastField} from "formik";
+import {Grid} from "@material-ui/core";
 
-import {TextField} from 'formik-material-ui';
+import {TextField} from "formik-material-ui";
 
 const Format = (props) => {
 

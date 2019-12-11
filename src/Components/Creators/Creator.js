@@ -1,8 +1,8 @@
-import React from 'react';
-import {FastField} from 'formik';
-import {FormControl, Grid, InputLabel, MenuItem} from '@material-ui/core';
+import React from "react";
+import {FastField} from "formik";
+import {FormControl, Grid, InputLabel, MenuItem} from "@material-ui/core";
 
-import {Select, TextField} from 'formik-material-ui';
+import {Select, TextField} from "formik-material-ui";
 
 const Creator = (props) => {
 

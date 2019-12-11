@@ -1,8 +1,8 @@
-import React from 'react';
-import Title from './Title';
-import {FieldArray} from 'formik';
-import {Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import Title from "./Title";
+import {FieldArray} from "formik";
+import {Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 
 const Titles = (props) => {
 
@@ -37,7 +37,7 @@ const Titles = (props) => {
                                     className="secondary"
                                     variant="contained"
                                     onClick={() => push(
-                                        {value: '', type: '',})}
+                                        {value: "", type: "",})}
                                 >
                                     <AddIcon/>
                                 </Button>

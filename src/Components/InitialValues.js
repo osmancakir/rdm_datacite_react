@@ -7,37 +7,37 @@
 export default {
     identifier: [
         {
-            'value': '',
-            'identifierType': 'DOI',
+            "value": "",
+            "identifierType": "DOI",
         },
     ],
     language: [
         {
-            'value': '',
+            "value": "",
         },
     ],
     publicationYear: [
         {
-            'value': '',
-            "xml:lang":''
+            "value": "",
+            "xml:lang":""
         },
     ],
     publisher: [
         {
-            'value': '',
-            'xml:lang':'',
+            "value": "",
+            "xml:lang":"",
         },
     ],
     version: [
         {
-            'value': '',
+            "value": "",
         },
     ],
     dates: [
         {
-            'value': '2019-09-13T12:21',
-            'type': 'Accepted',
-            'information':''
+            "value": "2019-09-13T12:21",
+            "type": "Accepted",
+            "information":""
         },
 
     ],
@@ -49,48 +49,48 @@ export default {
         }
     ],
     creators: [
-        {"creatorName": '', "nameType":'','Organizational':'', "givenName": '', "familyName": '', "nameIdentifier":'',
-            "nameIdentifierScheme":'', "schemeURI":'', "affiliation":''
+        {"creatorName": "", "nameType":"","Organizational":"", "givenName": "", "familyName": "", "nameIdentifier":"",
+            "nameIdentifierScheme":"", "schemeURI":"", "affiliation":""
         },
     ],
-    resourceType: [{'value': '', 'resourceTypeGeneral': ''},],
+    resourceType: [{"value": "", "resourceTypeGeneral": ""},],
     subjects: [
-        {"subject": '', "subjectScheme": '', "schemeURI": '', "valueURI":'', "xml:lang":''
+        {"subject": "", "subjectScheme": "", "schemeURI": "", "valueURI":"", "xml:lang":""
         },
     ],
     contributors: [
-        {"contributorName": '', "contributorType": '',"givenName": '', "familyName": '', "nameIdentifier":'',
-            "schemeURI": '', "nameIdentifierScheme": '', "affiliation":'', "xml:lang":'',
+        {"contributorName": "", "contributorType": "","givenName": "", "familyName": "", "nameIdentifier":"",
+            "schemeURI": "", "nameIdentifierScheme": "", "affiliation":"", "xml:lang":"",
         },
     ],
     relatedIdentifiers:[{
-        "relatedIdentifier":'', "relatedIdentifierType":'',"relationType":'',"relatedMetaDataScheme":'', "schemeURI":'',
+        "relatedIdentifier":"", "relatedIdentifierType":"","relationType":"","relatedMetaDataScheme":"", "schemeURI":"",
     },
     ],
     descriptions:[
         {
-            "value": '', "xml:lang":'', "descriptionType": 'Abstract',},
+            "value": "", "xml:lang":"", "descriptionType": "Abstract",},
 
     ],
     alternateIdentifiers:[{
-        "value":'', "alternateIdentifierType":'',
+        "value":"", "alternateIdentifierType":"",
     }],
     sizes:[{
-        "value":'',
+        "value":"",
     },],
     formats:[{
-        "value":'',
+        "value":"",
     },],
     rightsList:[{
-        "schemeURI":'', "rightsIdentifierScheme":'',"rightsIdentifier":'',"rightsURI":'', "xml:lang":''
+        "schemeURI":"", "rightsIdentifierScheme":"","rightsIdentifier":"","rightsURI":"", "xml:lang":""
     },
     ],
     fundingReferences:[{
-        "funderName":'', "funderIdentifier":'',"funderIdentifierType":'',"awardNumber":'', "awardTitle":'', "awardURI":'',
+        "funderName":"", "funderIdentifier":"","funderIdentifierType":"","awardNumber":"", "awardTitle":"", "awardURI":"",
     },
     ],
-    geoLocations:[{"geoLocationPlace": '', "geoLocationPoint": '', "pointLongitude": '', "pointLatitude": '', "geoLocationBox": '',
-        "westBoundLongitude":'', "eastBoundLongitude":'', "southBoundLatitude":'', "northBoundLatitude":'', "geoLocationPolygon":''
+    geoLocations:[{"geoLocationPlace": "", "geoLocationPoint": "", "pointLongitude": "", "pointLatitude": "", "geoLocationBox": "",
+        "westBoundLongitude":"", "eastBoundLongitude":"", "southBoundLatitude":"", "northBoundLatitude":"", "geoLocationPolygon":""
     },
     ]
 };

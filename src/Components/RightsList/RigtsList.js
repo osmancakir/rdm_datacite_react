@@ -1,8 +1,8 @@
-import React from 'react';
-import Rights from './Rights';
-import {FieldArray} from 'formik';
-import {Typography, Button} from '@material-ui/core';
-import {Add as AddIcon, Remove as RemoveIcon} from '@material-ui/icons';
+import React from "react";
+import Rights from "./Rights";
+import {FieldArray} from "formik";
+import {Typography, Button} from "@material-ui/core";
+import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 
 const RightsList = (props) => {
 
@@ -37,7 +37,7 @@ const RightsList = (props) => {
                                         className="secondary"
                                         variant="contained"
                                         onClick={() => push(
-                                            {schemeURI: '', rightsIdentifierScheme: '', rightsIdentifier: '', rightsURI:'',
+                                            {schemeURI: "", rightsIdentifierScheme: "", rightsIdentifier: "", rightsURI:"",
                                             })}
                                     >
                                         <AddIcon/>
