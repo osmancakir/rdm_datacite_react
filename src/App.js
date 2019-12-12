@@ -93,6 +93,7 @@ function getStepContent(step) {
             return  <div>
                 <Formik
                     initialValues={initialValues}
+                    validateOnChange={false}
                     onSubmit={(values, {setSubmitting}) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));
@@ -119,6 +120,7 @@ function getStepContent(step) {
             return  <div>
                 <Formik
                     initialValues={initialValues}
+                    validateOnChange={false}
                     onSubmit={(values, {setSubmitting}) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));
@@ -149,6 +151,7 @@ function getStepContent(step) {
             return  <div>
                 <Formik
                     initialValues={initialValues}
+                    validateOnChange={false}
                     onSubmit={(values, {setSubmitting}) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));

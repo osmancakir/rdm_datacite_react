@@ -49,7 +49,7 @@ export default {
         }
     ],
     creators: [
-        {"creatorName": "", "nameType":"","Organizational":"", "givenName": "", "familyName": "", "nameIdentifier":"",
+        {"creatorName": "", "nameType":"", "givenName": "", "familyName": "", "nameIdentifier":"",
             "nameIdentifierScheme":"", "schemeURI":"", "affiliation":""
         },
     ],

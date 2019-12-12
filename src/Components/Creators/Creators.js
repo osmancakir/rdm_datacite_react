@@ -39,7 +39,7 @@ const Creators = (props) => {
                                 className="secondary"
                                 variant="contained"
                                 onClick={() => push(
-                                    {CreatorName: "", givenName: "", familyName: "", nameIdentifier:"",
+                                    {creatorName: "", nameType:"", givenName: "", familyName: "", nameIdentifier:"",
                                         nameIdScheme:"", identifierSchemeUri:"", creatorAffiliation:""})}
                             >
                                 <AddIcon/>

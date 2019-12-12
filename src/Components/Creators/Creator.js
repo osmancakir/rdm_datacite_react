@@ -13,6 +13,11 @@ const Creator = (props) => {
 
     ];
 
+    const nameType = [
+        "Personal",
+        "Organizational"
+    ];
+
     return (
         <React.Fragment>
         <Grid container spacing={2}>
@@ -26,13 +31,24 @@ const Creator = (props) => {
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <FastField
-                    name={`creators.${index}.nameType`}
-                    label="nameType"
-                    fullWidth
-                    required={true}
-                    component={TextField}
-                />
+                <FormControl fullWidth>
+                    <InputLabel shrink variant={"outlined"}>
+                        nameType
+                    </InputLabel>
+                    <FastField
+                        fullWidth
+                        component={Select}
+                        name={`creators.${index}.nameType`}
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        {nameType.map((nameType) =>
+                            <MenuItem key={nameType}
+                                      value={nameType}>{nameType}</MenuItem>,
+                        )}
+                    </FastField>
+                </FormControl>
             </Grid>
             <Grid item xs={12} sm={6}>
                 <FastField
