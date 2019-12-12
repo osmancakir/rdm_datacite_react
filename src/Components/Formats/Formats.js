@@ -13,7 +13,7 @@ const Formats = (props) => {
     <Typography variant="h6" gutterBottom>Format(s):</Typography>
         <React.Fragment>
             <FieldArray
-                name="sizes"
+                name="formats"
                 render={({move, swap, push, insert, unshift, pop}) => (
                     <React.Fragment>
                         {formats.length > 0 &&

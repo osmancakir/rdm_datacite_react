@@ -31,7 +31,10 @@ import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import InitialValues from "./Components/InitialValues"
+// import InitialValues from "./Components/InitialValues"
+import InitialValues from "./Components/initials.json"
+//import mandatory_initials from "./Components/mandatory_initials.json"
+//import recommended_initials from "./Components/recommended_initials.json"
 
 
 
@@ -92,7 +95,7 @@ function getStepContent(step) {
         case 0:
             return  <div>
                 <Formik
-                    initialValues={initialValues}
+                    initialValues={InitialValues}
                     validateOnChange={false}
                     onSubmit={(values, {setSubmitting}) => {
                         setTimeout(() => {
@@ -119,7 +122,7 @@ function getStepContent(step) {
         case 1:
             return  <div>
                 <Formik
-                    initialValues={initialValues}
+                    initialValues={InitialValues}
                     validateOnChange={false}
                     onSubmit={(values, {setSubmitting}) => {
                         setTimeout(() => {

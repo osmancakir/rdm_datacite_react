@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf572936-2565-4c77-b1a9-94489dcf5fe7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Identifier/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ResourceType/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Version/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Creators/Creator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Creators/Creator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Creators/Creators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Creators/Creators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/InitialValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/InitialValues.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Formats/Formats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Formats/Formats.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +121,7 @@
       <workItem from="1575901774685" duration="5109000" />
       <workItem from="1576071216567" duration="7476000" />
       <workItem from="1576097408149" duration="4267000" />
-      <workItem from="1576139070275" duration="2821000" />
+      <workItem from="1576139070275" duration="8045000" />
     </task>
     <servers />
   </component>
@@ -150,6 +152,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576145351840">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1576145351840" />
     <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1576139830536">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
