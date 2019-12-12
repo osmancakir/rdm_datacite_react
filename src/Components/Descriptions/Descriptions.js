@@ -3,6 +3,7 @@ import Description from "./Description";
 import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
+import { generate } from "shortid";
 
 const Descriptions = (props) => {
 
@@ -18,7 +19,7 @@ const Descriptions = (props) => {
                     <React.Fragment>
                         {descriptions.length > 0 &&
                         descriptions.map((description, index) => (
-                            <React.Fragment key={index}>
+                            <React.Fragment key={description.id}>
                                 <React.Fragment>
                                     <Description index={index}/>
                                 </React.Fragment>
@@ -37,7 +38,7 @@ const Descriptions = (props) => {
                                 className="secondary"
                                 variant="contained"
                                 onClick={() => push(
-                                    {value: "", descriptionType: "",})}
+                                    {id:generate(), value: "", descriptionType: "",})}
                             >
                                 <AddIcon />
                             </Button>

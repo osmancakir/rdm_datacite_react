@@ -3,6 +3,8 @@ import Contributor from "./Contributor";
 import {FieldArray} from "formik";
 import { Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
+import { generate } from "shortid";
+
 
 const Contributors = (props) => {
 
@@ -18,7 +20,7 @@ const Contributors = (props) => {
                     <React.Fragment>
                         {contributors.length > 0 &&
                         contributors.map((contributor, index) => (
-                            <React.Fragment key={index}>
+                            <React.Fragment key={contributor.id}>
                                 <React.Fragment>
                                     <Contributor index={index}/>
                                 </React.Fragment>
@@ -38,7 +40,7 @@ const Contributors = (props) => {
                                 className="secondary"
                                 variant="contained"
                                 onClick={() => push(
-                                    {contributorName: "", contributorType: "",givenName: "", familyName: "",
+                                    {id: generate(), contributorName: "", contributorType: "",givenName: "", familyName: "",
                                         nameIdentifier:"", schemeURI: "", nameIdentifierScheme: "", affiliation:"",
                                         affiliationIdentifier:"", affiliationIdentifierScheme:"",})}
                             >

@@ -19,13 +19,13 @@ const Language = (props) => {
                         <React.Fragment>
                             {language.length > 0 &&
                             language.map((language, index) => (
-                                <React.Fragment key={index}>
+                                <React.Fragment key={language.id}>
                                 <Grid item xs={12}>
                                     <FastField
                                         name={`language.${index}.value`}
                                         label="Language"
                                         fullWidth
-                                        required={true}
+                                        required={false}
                                         component={TextField}
                                     />
                                 </Grid>

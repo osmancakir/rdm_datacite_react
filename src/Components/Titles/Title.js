@@ -27,7 +27,7 @@ const Title = (props) => {
                     name={`titles.${index}.value`}
                     label="Title"
                     fullWidth
-                    required={true}
+                    required={false}
                     component={TextField}
                 />
             </Grid>
@@ -36,7 +36,7 @@ const Title = (props) => {
                     name={`titles.${index}.xml:lang`}
                     label="Language"
                     fullWidth
-                    required={true}
+                    required={false}
                     component={TextField}
                 />
             </Grid>

@@ -3,6 +3,8 @@ import Creator from "./Creator";
 import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
+import { generate } from "shortid";
+
 
 const Creators = (props) => {
 
@@ -19,7 +21,7 @@ const Creators = (props) => {
                         <React.Fragment>
                             {creators.length > 0 &&
                             creators.map((creator, index) => (
-                                <React.Fragment key={index}>
+                                <React.Fragment key={creator.id}>
                                     <React.Fragment>
                                         <Creator index={index}/>
                                     </React.Fragment>
@@ -39,7 +41,7 @@ const Creators = (props) => {
                                 className="secondary"
                                 variant="contained"
                                 onClick={() => push(
-                                    {creatorName: "", nameType:"", givenName: "", familyName: "", nameIdentifier:"",
+                                    {id:generate(), creatorName: "", nameType:"", givenName: "", familyName: "", nameIdentifier:"",
                                         nameIdScheme:"", identifierSchemeUri:"", creatorAffiliation:""})}
                             >
                                 <AddIcon/>

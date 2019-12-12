@@ -3,6 +3,7 @@ import RelatedIdentifier from "./RelatedIdentifier";
 import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
+import { generate } from "shortid";
 
 const RelatedIdentifiers = (props) => {
 
@@ -17,8 +18,8 @@ const RelatedIdentifiers = (props) => {
                     render={({move, swap, push, insert, unshift, pop}) => (
                         <React.Fragment>
                             {relatedIdentifiers.length > 0 &&
-                            relatedIdentifiers.map((date, index) => (
-                                <React.Fragment key={index}>
+                            relatedIdentifiers.map((relatedIdentifier, index) => (
+                                <React.Fragment key={relatedIdentifier.id}>
                                     <React.Fragment>
                                         <RelatedIdentifier index={index}/>
                                     </React.Fragment>
@@ -37,7 +38,7 @@ const RelatedIdentifiers = (props) => {
                                     className="secondary"
                                     variant="contained"
                                     onClick={() => push(
-                                        {relatedIdentifier:"", relatedIdentifierType:"", relationType:"",
+                                        {id:generate(), relatedIdentifier:"", relatedIdentifierType:"", relationType:"",
                                             relatedMetaDataScheme:"", schemeURI:"", resourceTypeGeneral:"",})}
                                 >
                                     <AddIcon/>

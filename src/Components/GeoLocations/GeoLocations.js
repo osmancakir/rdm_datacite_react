@@ -3,7 +3,7 @@ import GeoLocation from "./GeoLocation";
 import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
-
+import { generate } from "shortid";
 
 const GeoLocations = (props) => {
 
@@ -19,7 +19,7 @@ const GeoLocations = (props) => {
                     <React.Fragment>
                         {geoLocations.length > 0 &&
                         geoLocations.map((geoLocation, index) => (
-                            <React.Fragment key={index}>
+                            <React.Fragment key={geoLocation.id}>
                                 <React.Fragment>
                                     <GeoLocation index={index}/>
                                 </React.Fragment>
@@ -38,7 +38,7 @@ const GeoLocations = (props) => {
                                 className="secondary"
                                 variant="contained"
                                 onClick={() => push(
-                                    {geoLocationPlace: "", geoLocationPoint: "", pointLongitude: "", pointLatitude: "", geoLocationBox: "",
+                                    {id:generate(), geoLocationPlace: "", geoLocationPoint: "", pointLongitude: "", pointLatitude: "", geoLocationBox: "",
                                         westBoundLongitude:"", eastBoundLongitude:"", southBoundLatitude:"", northBoundLatitude:"", geoLocationPolygon:"",
                                     })}
                             >

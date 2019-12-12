@@ -20,12 +20,12 @@ const Version = (props) => {
                             <React.Fragment>
                                 {version.length > 0 &&
                                 version.map((version, index) => (
-                                    <Grid item xs={12} key={index}>
+                                    <Grid item xs={12} key={version.id}>
                                         <FastField
                                             name={`version.${index}.value`}
                                             label="Version"
                                             fullWidth
-                                            required={true}
+                                            required={false}
                                             component={TextField}
                                         />
                                     </Grid>

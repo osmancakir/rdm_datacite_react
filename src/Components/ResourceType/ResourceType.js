@@ -21,7 +21,7 @@ const ResourceType = (props) => {
                         <React.Fragment>
                             {resourceType.length > 0 &&
                             resourceType.map((resType, index) => (
-                                <React.Fragment key={index}>
+                                <React.Fragment key={resType.id}>
                                     <Grid item xs={12}>
                                         <FastField
                                             name={`resourceType.${index}.value`}

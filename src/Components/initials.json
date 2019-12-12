@@ -4,91 +4,92 @@
 
 {
   "identifier": [
-    {
+    { "id": "identifier",
       "value": "",
       "identifierType": "DOI"
     }
   ],
-  "language": [
-    {
-      "value": ""
-    }
-  ],
-  "publicationYear": [
-    {
-      "value": "",
-      "xml:lang":""
-    }
-  ],
-  "publisher": [
-    {
-      "value": "",
-      "xml:lang":""
-    }
-  ],
-  "version": [
-    {
-      "value": ""
-    }
-  ],
-  "dates": [
-    {
-      "value": "2019-09-13T12:21",
-      "type": "Accepted",
-      "information":""
-    }
-
-  ],
   "titles": [
-    {
+    { "id": "title",
       "value":"",
       "type":"",
       "xml:lang":""
     }
   ],
   "creators": [
-    {"creatorName": "", "nameType":"", "givenName": "", "familyName": "", "nameIdentifier":"",
+    {"id":"creator","creatorName": "", "nameType":"", "givenName": "", "familyName": "", "nameIdentifier":"",
       "nameIdentifierScheme":"", "schemeURI":"", "affiliation":""
     }
   ],
-  "resourceType": [{"value": "", "resourceTypeGeneral": ""}],
-  "subjects": [
-    {"subject": "", "subjectScheme": "", "schemeURI": "", "valueURI":"", "xml:lang":""
+  "publisher": [
+    {
+      "id":"publisher","value": "",
+      "xml:lang":""
     }
   ],
+  "publicationYear": [
+    {
+      "id":"publicationYear","value": "",
+      "xml:lang":""
+    }
+  ],
+  "resourceType": [{"id":"resourceType","value": "", "resourceTypeGeneral": ""}],
+  "subjects": [
+    {"id":"subject","subject": "", "subjectScheme": "", "schemeURI": "", "valueURI":"", "xml:lang":""
+    }
+  ],
+
+
   "contributors": [
-    {"contributorName": "", "contributorType": "","givenName": "", "familyName": "", "nameIdentifier":"",
+    {"id":"contributor","contributorName": "", "contributorType": "","givenName": "", "familyName": "", "nameIdentifier":"",
       "schemeURI": "", "nameIdentifierScheme": "", "affiliation":"", "xml:lang":""
     }
   ],
+  "dates": [
+    {
+      "id":"date","value": "2019-09-13T12:21",
+      "type": "Accepted",
+      "information":""
+    }
+  ],
  "relatedIdentifiers":[{
-    "relatedIdentifier":"", "relatedIdentifierType":"","relationType":"","relatedMetaDataScheme":"", "schemeURI":""
+    "id":"relatedIdentifier","relatedIdentifier":"", "relatedIdentifierType":"","relationType":"","relatedMetaDataScheme":"", "schemeURI":""
   }
   ],
   "descriptions":[
     {
-      "value": "", "xml:lang":"", "descriptionType": "Abstract"}
+      "id":"description","value": "", "xml:lang":"", "descriptionType": "Abstract"}
 
   ],
+  "geoLocations":[{"id":"geoLocation","geoLocationPlace": "", "geoLocationPoint": "", "pointLongitude": "", "pointLatitude": "", "geoLocationBox": "",
+    "westBoundLongitude":"", "eastBoundLongitude":"", "southBoundLatitude":"", "northBoundLatitude":"", "geoLocationPolygon":""
+  }
+  ],
+  "language": [
+    {
+      "id":"language","value": ""
+    }
+  ],
   "alternateIdentifiers":[{
-    "value":"", "alternateIdentifierType":""
+    "id":"alternateIdentifier","value":"", "alternateIdentifierType":""
   }],
   "sizes":[{
-    "value":""
+    "id":"size","value":""
   }],
   "formats":[{
-    "value":""
+    "id":"format","value":""
   }],
+  "version": [
+    {
+      "id":"version","value": ""
+    }
+  ],
   "rightsList":[{
-    "schemeURI":"", "rightsIdentifierScheme":"","rightsIdentifier":"","rightsURI":"", "xml:lang":""
+    "id":"rightsList","schemeURI":"", "rightsIdentifierScheme":"","rightsIdentifier":"","rightsURI":"", "xml:lang":""
   }
   ],
   "fundingReferences":[{
-    "funderName":"", "funderIdentifier":"","funderIdentifierType":"","awardNumber":"", "awardTitle":"", "awardURI":""
-  }
-  ],
-  "geoLocations":[{"geoLocationPlace": "", "geoLocationPoint": "", "pointLongitude": "", "pointLatitude": "", "geoLocationBox": "",
-    "westBoundLongitude":"", "eastBoundLongitude":"", "southBoundLatitude":"", "northBoundLatitude":"", "geoLocationPolygon":""
+    "id":"fundingReference","funderName":"", "funderIdentifier":"","funderIdentifierType":"","awardNumber":"", "awardTitle":"", "awardURI":""
   }
   ]
 }

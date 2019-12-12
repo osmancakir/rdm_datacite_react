@@ -3,6 +3,7 @@ import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 import Size from "./Size";
+import { generate } from "shortid";
 
 const Sizes = (props) => {
 
@@ -18,7 +19,7 @@ const Sizes = (props) => {
                         <React.Fragment>
                             {sizes.length > 0 &&
                             sizes.map((size, index) => (
-                                <React.Fragment key={index}>
+                                <React.Fragment key={size.id}>
                                     <React.Fragment>
                                         <Size index={index}/>
                                     </React.Fragment>
@@ -36,7 +37,7 @@ const Sizes = (props) => {
                                 <Button
                                     className="secondary"
                                     variant="contained"
-                                    onClick={() => push({value:""})}
+                                    onClick={() => push({id:generate(), value:""})}
                                 >
                                     <AddIcon/>
                                 </Button>

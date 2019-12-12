@@ -3,6 +3,7 @@ import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
 import Format from "./Format";
+import { generate } from "shortid";
 
 const Formats = (props) => {
 
@@ -18,7 +19,7 @@ const Formats = (props) => {
                     <React.Fragment>
                         {formats.length > 0 &&
                         formats.map((format, index) => (
-                            <React.Fragment key={index}>
+                            <React.Fragment key={format.id}>
                                 <React.Fragment>
                                     <Format index={index}/>
                                 </React.Fragment>
@@ -36,7 +37,7 @@ const Formats = (props) => {
                             <Button
                                 className="secondary"
                                 variant="contained"
-                                onClick={() => push({value:""})}
+                                onClick={() => push({id:generate(), value:""})}
                             >
                                 <AddIcon/>
                             </Button>

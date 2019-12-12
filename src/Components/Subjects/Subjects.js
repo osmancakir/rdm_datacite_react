@@ -3,6 +3,7 @@ import Subject from "./Subject";
 import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
+import { generate } from "shortid";
 
 const Subjects = (props) => {
 
@@ -18,7 +19,7 @@ const Subjects = (props) => {
                             <React.Fragment>
                                 {subjects.length > 0 &&
                                 subjects.map((subject, index) => (
-                                    <React.Fragment key={index}>
+                                    <React.Fragment key={subject.id}>
                                         <React.Fragment>
                                             <Subject index={index}/>
                                         </React.Fragment>
@@ -37,7 +38,7 @@ const Subjects = (props) => {
                                         className="secondary"
                                         variant="contained"
                                         onClick={() => push(
-                                            {subject: "", subjectScheme: "", subjectSchemeUri: "", subjectValueURI:"",})}
+                                            {id:generate(), subject: "", subjectScheme: "", subjectSchemeUri: "", subjectValueURI:"",})}
                                     >
                                         <AddIcon/>
                                     </Button>

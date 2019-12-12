@@ -19,7 +19,7 @@ const Identifier = (props) => {
                         <React.Fragment>
                             {identifier.length > 0 &&
                             identifier.map((identifier, index) => (
-                                <Grid item xs={12} key={index}>
+                                <Grid item xs={12} key={identifier.id}>
                                     <FastField
                                         name={`identifier.${index}.value`}
                                         label="Identifier"

@@ -3,6 +3,8 @@ import Date from "./Date";
 import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
+import { generate } from "shortid";
+
 
 const Dates = (props) => {
 
@@ -20,7 +22,7 @@ const Dates = (props) => {
                     <React.Fragment>
                         {dates.length > 0 &&
                         dates.map((date, index) => (
-                            <React.Fragment key={index}> {/*this is probably where you need to give ids */}
+                            <React.Fragment key={date.id}> {/*this is probably where you need to give ids */}
                                 <React.Fragment>
                                     <Date index={index}/>
                                 </React.Fragment>
@@ -40,7 +42,7 @@ const Dates = (props) => {
                             className="secondary"
                             variant="contained"
                             onClick={() => push(
-                                {value: "", type: "", information: ""})}
+                                {id:generate(), value: "", type: "", information: ""})}
                         >
                             <AddIcon/>
                         </Button>

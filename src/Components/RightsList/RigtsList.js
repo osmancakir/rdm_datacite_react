@@ -3,6 +3,7 @@ import Rights from "./Rights";
 import {FieldArray} from "formik";
 import {Typography, Button} from "@material-ui/core";
 import {Add as AddIcon, Remove as RemoveIcon} from "@material-ui/icons";
+import { generate } from "shortid";
 
 const RightsList = (props) => {
 
@@ -18,7 +19,7 @@ const RightsList = (props) => {
                             <React.Fragment>
                                 {rightsList.length > 0 &&
                                 rightsList.map((rights, index) => (
-                                    <React.Fragment key={index}>
+                                    <React.Fragment key={rights.id}>
                                         <React.Fragment>
                                             <Rights index={index}/>
                                         </React.Fragment>
@@ -37,7 +38,7 @@ const RightsList = (props) => {
                                         className="secondary"
                                         variant="contained"
                                         onClick={() => push(
-                                            {schemeURI: "", rightsIdentifierScheme: "", rightsIdentifier: "", rightsURI:"",
+                                            {id:generate(), schemeURI: "", rightsIdentifierScheme: "", rightsIdentifier: "", rightsURI:"",
                                             })}
                                     >
                                         <AddIcon/>
