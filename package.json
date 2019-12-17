@@ -1,18 +1,20 @@
 {
-  "name": "rdm_datacite",
+  "name": "rdm_datacite_reacthookform",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.4.3",
-    "@material-ui/icons": "^4.4.3",
-    "formik": "^1.5.8",
-    "formik-material-ui": "^0.0.22",
-    "react": "^16.9.0",
-    "react-albus": "^2.0.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "^3.3.0",
-    "shortid": "^2.2.15",
-    "yup": "^0.27.0"
+    "@material-ui/core": "^4.7.2",
+    "@material-ui/icons": "^4.5.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.3",
+    "@testing-library/user-event": "^7.1.2",
+    "little-state-machine": "^2.10.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-hook-form": "^3.29.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "shortid": "^2.2.15"
   },
   "scripts": {
     "start": "react-scripts start",
